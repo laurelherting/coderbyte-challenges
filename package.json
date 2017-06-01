@@ -1,0 +1,19 @@
+{
+  "name": "coderbyte-challenges",
+  "version": "1.0.0",
+  "description": "coderbyte challenges skill",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laurelherting/coderbyte-challenges.git"
+  },
+  "author": "laurel herting",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laurelherting/coderbyte-challenges/issues"
+  },
+  "homepage": "https://github.com/laurelherting/coderbyte-challenges#readme"
+}
