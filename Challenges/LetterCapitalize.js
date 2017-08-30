@@ -23,11 +23,14 @@ function LetterCapitalize(str) {
   }
   str = arr.join("");
   return str; 
+  // console.log('works1');
 }
 
 const in1 = "i like coffee";
 const expect1 = "I Like Coffee";
+  // console.log('works2');
 const test1 = letterCapitalize(in1);
+   console.log('works');
 assert.strictEqual(test1, expect1, `should be ${expect1}`);
    
 
