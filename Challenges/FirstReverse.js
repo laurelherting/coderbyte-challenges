@@ -1,15 +1,33 @@
- /*  Have the function FirstReverse(str) take the str parameter being passed &  return the string in reversed order. For example: if the input string is "Hello World and Coders" then your program should return the string sredoC dna dlroW olleH */  
-function FirstReverse(str) { 
+const assert = require('assert');
 
-  let newString = "";
+// Have the function FirstReverse(str) take the str parameter being passed and
+// return the string in reversed order. For example: if the input string is
+// "Hello World and Coders" then your program should return the string
+// sredoC dna dlroW olleH
 
-  // add each character to newString
-  for (let i = str.length - 1; i >= 0; i--) {   
-    newString = newString + str.charAt(i);
+function firstReverse(str) { 
+  const chars = str.split("");
+
+  const arr = [];
+  const ln = str.length;
+  let idx = ln;
+  for(let i = 0; i < ln; i++) {
+      arr.push(chars[idx - 1]);
+      idx = idx - 1;
   }
-
-  return newString;
-         
+  
+  const revStr = arr.join("");
+  return revStr; 
 }
    
-FirstReverse(readline());
+// Console.log('coderbyte');
+
+const a1 = "challenge";
+const r1 = "egnellahc";
+const t1 = firstReverse(a1);                            
+assert.strictEqual(t1, r1, `should be ${r1}`);
+
+const a2 = "I Love Code";
+const r2 = "edoC evoL I";
+const t2 = firstReverse(a2);                            
+assert.strictEqual(t2, r2, `should be ${r2}`);
