@@ -13,7 +13,8 @@ function LongestWord(sen) {
     newArray.push(myArray[i].length + "-" + myArray[i]);
 
   }
-  
+ // console.log('this works');
+
   const sorted = newArray.sort(function (a,b){
     if (parseInt(a) > parseInt(b)){
     
@@ -28,11 +29,13 @@ function LongestWord(sen) {
        }
   });
   
+// console.log('this works too');
   return sorted[0].replace(/\d+\-/,""); 
 }
-
 const a1 = "This is a hedgehog";
+// console.log('a1');
 const r1 = "hedgehog";
+// console.log('r1');
 const t1 = LongestWord(a1);
-Console.log(t1);
-assert.strictEqual(t1, longest, "LongestWord should be hedgehog");
+// console.log(t1);
+assert.strictEqual(t1, r1,);
