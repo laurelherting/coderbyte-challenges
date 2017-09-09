@@ -38,4 +38,4 @@ const r1 = "hedgehog";
 // console.log('r1');
 const t1 = LongestWord(a1);
 // console.log(t1);
-assert.strictEqual(t1, r1,);
+assert.strictEqual(t1, r1);
