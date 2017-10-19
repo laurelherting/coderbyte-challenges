@@ -33,13 +33,11 @@ function LetterChanges(str) {
 
 const a1 = "challenge";
 const r1 = "dibmmfohf";
-// const r2 = "dIbmmfOhf";
+
 const t1 = LetterChanges(a1);                            
-// console.log(r1);
-assert.strictEqual(t1, r1);
+console.log(r1);
+assert(t1, r1);
 const a2 = "dibmmfohf";
 const r2 = "dIbmmfOhf";
-console.log(t2);
-// const t2 = LetterChanges(a2);                            
+
 console.log(r2);
-// assert.strictEqual(t2, r2);
