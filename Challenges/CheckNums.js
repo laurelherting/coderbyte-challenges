@@ -1,4 +1,10 @@
-/* Have the func CheckNums(num1,num2) take both parameters being passed and return the string true if num2 is greater than num1, otherwise return the string false. If the parameter values are equal to each other then return the string -1.  */
+const assert = require('assert');
+
+// Have the func CheckNums(num1,num2) take both parameters being 
+// passed and return the string true if num2 is greater than num1, 
+// otherwise return the string false. 
+// If the parameter values are equal to each other then return the string -1.
+
 function CheckNums(num1,num2) { 
   let counter = "";
   if (num1 < num2){
@@ -11,9 +17,10 @@ function CheckNums(num1,num2) {
   
    counter = false
   }
-  // code goes here  
   return counter; 
          
 }
-   
-CheckNums(readline());           
+
+t1 = CheckNums(5);
+console.log(t1);
+assert(t1, 5, "");
