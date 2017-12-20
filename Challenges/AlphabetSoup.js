@@ -32,5 +32,7 @@ function AlphabetSoup(str) {
 }
 
 t2 = AlphabetSoup();
+// input: "whoosh"
+// output: "oohhsw"
 //console.log(t2);
 assert.strictEqual(t2, "");
