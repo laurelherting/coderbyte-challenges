@@ -1,3 +1,5 @@
+const assert = require('assert');
+
 // steps with explanation
 
 function WordCount(str) {
@@ -14,3 +16,10 @@ function WordCount(str) {
 
   return str.split(" ").length;
 }
+
+const a1 = "WordCount";
+const r1 = "React is awesome";
+
+const t1 = "WordCount";
+console.log(r1);
+assert(t1, r1);
