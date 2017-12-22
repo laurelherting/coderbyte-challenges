@@ -23,7 +23,6 @@ function AlphabetSoup(str) {
         return cleanArray;
     }
     
-    console.log(coderbyte);
     // Alphabetize the array and convert to string
     alphabetizedString = ( removeSpaces( separatedString ).sort() ).join('');
  
@@ -31,8 +30,14 @@ function AlphabetSoup(str) {
     return alphabetizedString; 
 }
 
-t2 = AlphabetSoup();
+const a1 = "AlphabetSoup";
+const r1 = "whoosh";
+
+const t1 = AlphabetSoup(a1);
+console.log(r1);
+assert(t1, r1);
 // input: "whoosh"
 // output: "oohhsw"
-//console.log(t2);
-assert.strictEqual(t2, "");
+const a2 = "whoosh";
+const r2 = "oohhsw";
+console.log(r2);
