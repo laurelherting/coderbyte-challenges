@@ -1,25 +1,20 @@
-// steps with explanation
+const assert = require('assert');
 
 function ABCheck(str) {
-    /* declare two regex expressions if a & b ever occur within three characters of each other. `.` is a wildcard that matches a character. */ 
+    let arr = str.split("");
+    let flag = "false";
 
-  let testOne = /a...b/;
-  let testTwo = /b...a/;
-
-    /* Now, use the test method with the regex to see if the string contains matching characters. */ 
-  let aThenB = testOne.test(str);
-  let BthenA = testTwo.test(str);
-
-  // return answer
-
-  return aThenB || bThenA;
+    arr.filter( function( value, index ) {
+        if( value === "a" && arr[index + 4] === "b") { flag = "true"; }
+        if( value === "b" && arr[index + 4] === "a") { flag = "true"; }
+    });
+    return flag;
 }
+// console.log("Laurie laughs");
 
-// best practice
+const a1 = "Laurie laughs";
+const r1 = "this is it";
 
-function ABCheck(str) {
-
-
-  return (/a.../b).test(str) || (/b.../a).test(str);
-}
-
+const t1 = ABCheck(a1);
+// console.log(r1);
+assert(t1, r1);
