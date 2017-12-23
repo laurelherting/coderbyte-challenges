@@ -4,7 +4,6 @@ const assert = require('assert');
 // return the factorial of it (e.g. if num = 4, return (4 * 3 * 2 * 1))
 // For the test cases, the range will be between 1 and 18 and the input will
 // always be an integer.
-
 function FirstFactorial(num) { 
     if (num === 0) {
       return 1;
@@ -19,4 +18,3 @@ assert.strictEqual(t1, 120, "Input 5 should yield Output 120");
 t2 = FirstFactorial(9);                            
 // console.log(t2);
 assert.strictEqual(t2, 362880, "Input 9 should yield Output 362880");
-
