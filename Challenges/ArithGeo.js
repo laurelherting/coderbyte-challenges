@@ -1,36 +1,29 @@
-function ArithGeo(arr) {
+const assert = require('assert');
+function arithGeo(arr) {
+    let i, j;
 
-    const arrDif = [];
-    const arrQuo = [];
-    const ariFlag = true;
-    const geoFlag = true;
-
-  /* loop through each item in array and use the .push method to send */
-  for (let i = 0; i < arr.length - 1; i++) {
-
-        // ...the difference of each item to our arrDif array.
-        arrDif.push(arr[i + 1] - arr[i]);
-
-        // ...the  quotient of each item to our arrQuo array. 
-        arrQuo.push(arr[i + 1] / arr[i]);
-    }
-
-        /* This if statement checks to see if each item in our array of differences is equal to the next item in the array, and if not, sets our ariFlag to false. */
-        if (arrDif[j] != arrDif[j + 1]) {
-            ariFlag = false;
-        }
-
-        /*  Do the same thing for our array of quotients. */
-        if (arrQuo[j] != arrQuo[j + 1]) {
-            geoFlag = false;
+    let diff = arr[1] - arr[0];
+    let isArithmetic = true;
+    for (i = 1, j = 2; isArithmetic && j < arr.length; i++, j++) {
+        if (isArithmetic && arr[j] - arr[i] != diff) {
+            isArithmetic = false;
         }
     }
 
-      /* Return "Arithmetic" if the ariFlag is set to true, "Geometric" if the geoFlag is set to true, and -1 if neither are set to true. */
-    if (ariFlag) {
-        return "Arithmetic";
-    } else if (geoFlag) {
-        return "Geometric";
-    } else {
-        return -1;
+    let ratio = arr[1] / arr[0];
+    let isGeometric = isFinite(ratio) && ratio != 0;
+    for (i = 1, j = 2; isGeometric && j < arr.length; i++, j++) {
+        if (isGeometric && arr[j] / arr[i] != ratio) {
+            isGeometric = false;
+        }
     }
+
+    return isArithmetic && isGeometric ? 'both' :
+           isArithmetic                ? 'arithmetic' : 
+                           isGeometric ? 'geometric'  : '';
+}
+const a1 = "Arithmetic";
+const r1 = "magic math";
+
+// console.log(r1);
+assert(r1);
