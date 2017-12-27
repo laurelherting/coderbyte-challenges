@@ -20,9 +20,9 @@ const assert = require('assert');
 function CheckNums(num1,num2) {
     if (num1===num2) return '-1'
     return (num2 > num1).toString()
-  }
+}
 
-  console.log(3);
+// console.log(3);
 const a1 = CheckNums(1,3);
 const r1 = "false";
 
