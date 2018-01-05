@@ -1,30 +1,44 @@
-/* Have the func SimpleSymbols(str) take the str parameter being passed and determine if it is an acceptable sequence by either returning the string true or false. The str parameter will be composed of + and = symbols with several letters between them (ie. ++d+===+c++==a) and for the string to be true each letter must be surrounded by a + symbol. So the string to the left would be false. The string will not be empty and will have at least one letter. */ 
+const assert = require('assert');
+// catch invalid strings instead of valid ones
 
-function SimpleSymbols(str) { 
-
-  let converted = str.replace(/\w+/g, "X").replace(/[\s\=]+/, "");
-  
-  let test = false;
-  
-  for (let i = 0; i < converted.length; i++){
-  
-    if (converted[i] == "X"){
-    
-      if (converted[i-1] == "+" && converted[i+1] == "+" || converted < 3){
-      
-      test = true;
-        
-        break;
+function SimpleSymbols(str) {
+if (str[0] >= 'a' || str[str.length - 1] >= 'a') {
+    return false;
+  } else {
+    for (var i = 1; i < str.length - 1; i++) {
+      if (str[i] >= 'a') {
+        if (str[i + 1] !== '+' || str[i - 1] !== '+') {
+          return false;
+        }
       }
-    
     }
-  
   }
-  
- str =  test;
-  // code goes here  
-  return str; 
-         
+  return true;
 }
-   
-SimpleSymbols(readline());           
+
+const a = [
+    // valid
+    "++b+===+c++==+a++",
+    "+a+a+a+",
+    "+a++a+",
+    "+a+",
+    // invalid
+    "++b+===+c++==a",
+    "+=b+",
+    "+bb+",
+    "+b=+",
+    "+b+b",
+    "b+b+"
+];
+const r = /^[+=\d]*\+(?:[a-z]\+[+=\d]*)+$/mi;
+
+a.forEach(function(s){
+console.log(r.test(s));
+});
+
+SimpleSymbols('++=+f+4=+s+'); // -> true;
+
+const a1 = "true";
+const r1 = "false";
+
+assert(r1);
