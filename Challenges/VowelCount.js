@@ -7,4 +7,7 @@ console.log(countVowels('abcdefghijklmnopqrstuvwxyz')); // 5
 console.log(countVowels('December')); // 3
 console.log(countVowels('xxx')); // 0
 
+const a1 = "vowels";
+const r1 = "array";
 
+assert(r1);
