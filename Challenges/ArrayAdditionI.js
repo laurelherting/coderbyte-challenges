@@ -51,7 +51,11 @@ function ArrayAdditionI(arr) {
     return result;
 }
 
-const t1 = "arr.sort";
-const r1 = "true";
+// condensed version, using reduce
+getSum = [1, 2, 3].reduce((a, b) => a + b, 0);
+console.log(getSum); // 6
 
-assert(r1);
+const a1 = "[1, 2, 3]";
+const t1 = "getSum([1, 2, 3])";
+
+assert(t1);
