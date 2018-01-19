@@ -11,12 +11,15 @@ function SecondGreatLow(arr) {
     solution = solution + ( arrSorted[ 1 ] + " " + arrSorted[ arr.length-2 ] );
     return solution;
 }
-
+console.log("this works");
 numArr = [60, 60];
 SecondGreatLow(numArr);
-console.log(SecondGreatLow);
+console.log("SecondGreatLow");
 
-const a1 = "[60, 60]";
-const t1 = "secondGreatLow([60, 60])";
-
+// error is in code below
+const a1 = "1,2,3";
+const r1 = "2"
+const t1 = SecondGreatLow(a1);
 assert(t1);
+//Input:1, 42, 42, 180
+//[1,2,3,100] 2 3
