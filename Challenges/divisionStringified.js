@@ -6,7 +6,7 @@ function divisionStringified(num1, num2) {
     let result = Math.round(num1 / num2).toString();
 
     // use the .split method to convert the result variable into an array
-    let resultArr = result.split("");
+    let resultArr = result.split('');
 
     // check if the result is greater than 100
     if (result >= 100) {
@@ -18,7 +18,7 @@ function divisionStringified(num1, num2) {
         for (let i = result.length - 3; i > 0; i -= 3) {
 
         // At every third character use the .splice method to insert a comma
-            resultArr.splice(i, 0, ",");
+            resultArr.splice(i, 0, ',');
         }
     }
 
@@ -26,7 +26,7 @@ function divisionStringified(num1, num2) {
     return resultArr.join("");
 }
 
-console.log(divisionStringified([44 / 5]));
+console.log(divisionStringified([503 / 52]));
 
-const t1 = divisionStringified([44, 5]);
+const t1 = divisionStringified([503, 52]);
 assert(t1);
