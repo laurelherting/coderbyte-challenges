@@ -22,11 +22,15 @@ function divisionStringified(num1, num2) {
         }
     }
 
+    console.log(resultArr.splice(200,30,4)); //this returns NaN4
+
     // Lastly, return the result array with the .join method to covert it into a string.
-    return resultArr.join("");
+    return resultArr.join('');
 }
 
-console.log(divisionStringified([503 / 52]));
+console.log(divisionStringified([503 / 52])); // numbers not working
 
-const t1 = divisionStringified([503, 52]);
+const t1 = "divisionStringified([503, 52])";
+const a1 = "resultArr.splice";
+
 assert(t1);
