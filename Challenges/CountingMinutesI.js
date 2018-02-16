@@ -1,7 +1,10 @@
 const assert = require('assert');
-
-/* Input:"1:23am-1:08am"
-Output:1425 */
+/*
+Input:"12:30pm-12:00am"
+Output:690
+Input:"1:23am-1:08am"
+Output:1425
+*/
 function countingMinutes(str) {
 const timeArray = str.split('-');
     let startTime = timeArray[0];
@@ -35,10 +38,7 @@ const timeArray = str.split('-');
     }
 }
 
-console.log('countingMinutes');
-const in1 = '12:30pm-12:00am';
-const expect1 = '690';
-const test1 = countingMinutes(in1);
-assert.strictEqual(test1, expect1, `should be ${expect1}`);
-
-assert(t1);
+//console.log(countingMinutes);
+const t1 = countingMinutes(12:30pm-12:00am);
+console.log(t1);
+assert.strictEqual(t1, 690, "Input 12:30pm-12:00am should yield Output 690");
