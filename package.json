@@ -1,19 +1,107 @@
 {
-  "name": "coderbyte-challenges",
-  "version": "1.0.0",
-  "description": "coderbyte challenges skill",
-  "main": "index.js",
+  "name": "hss-headspace",
+  "version": "0.1.0",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.18.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.8.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-prettier": "^2.4.0",
+    "eslint-plugin-react": "^7.5.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
+    "prettier": "^1.9.2"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "concurrently --kill-others \"yarn run dev\" \"yarn run dev-server\" \"yarn run json-server\"",
+    "debug": "concurrently --kill-others \"yarn run dev\" \"yarn run debug:dev-server\" \"yarn run json-server\"",
+    "dev": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "lint": "eslint .",
+    "precommit": "lint-staged",
+    "dev-server": "nodemon ./server.js --exec babel-node",
+    "debug:dev-server": "nodemon --inspect ./server.js --exec babel-node",
+    "json-server": "json-server -p 8080 db.json"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/laurelherting/coderbyte-challenges.git"
+  "babel": {
+    "presets": [
+      "env"
+    ]
   },
-  "author": "laurel herting",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/laurelherting/coderbyte-challenges/issues"
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   },
-  "homepage": "https://github.com/laurelherting/coderbyte-challenges#readme"
+  "eslintConfig": {
+    "extends": [
+      "airbnb",
+      "prettier",
+      "prettier/react"
+    ],
+    "env": {
+      "browser": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2017
+    },
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "react/no-string-refs": "off",
+      "react/no-unused-prop-types": "off",
+      "import/no-unresolved": 0,
+      "import/extensions": 0,
+      "import/no-extraneous-dependencies": "off",
+      "no-console": "off",
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true,
+          "parser": "flow",
+          "trailingComma": "es5",
+          "bracketSpacing": true
+        }
+      ],
+      "react/jsx-wrap-multilines": 0,
+      "arrow-parens": [
+        "error",
+        "as-needed"
+      ],
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".js",
+            ".jsx"
+          ]
+        }
+      ]
+    },
+    "globals": {
+      "fetch": true,
+      "describe": true,
+      "test": true,
+      "expect": true
+    }
+  },
+  "optionalDependencies": {
+    "redux-devtools-extension": "^2.13.2"
+  },
+  "proxy": "http://localhost:4000",
+  "nodemonConfig": {
+    "watch": [
+      "server.js",
+      "server/"
+    ]
+  }
 }
