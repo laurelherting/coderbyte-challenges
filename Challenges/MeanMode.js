@@ -1,7 +1,3 @@
-/*Input:1, 2, 3
-Output:0
-Input:4, 4, 4, 6, 2
-Output:1 */
 const assert = require('assert');
 
 function meanMode (arr) {
@@ -19,7 +15,7 @@ function meanMode (arr) {
       modeMap[arr[i]] = 1;
     }
     if (modeMap[arr[i]] > modeCount) {
-      mode = arr[i];
+    mode = arr[i];
       modeCount = modeMap[arr[i]];
     }
   }
@@ -31,8 +27,11 @@ function meanMode (arr) {
   } else {
     return 0;
   }
-  }
 }
 
-const t1 = meanMode;
-assert(t1);
+const a1 = "[1, 2, 3]";
+const r1 = 0;
+const t1 = meanMode(a1);
+assert.strictEqual(t1, r1); 
+
+console.log(t1); // 0
