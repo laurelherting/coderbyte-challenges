@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^4.18.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.8.0",
     "eslint-plugin-import": "^2.8.0",
@@ -15,7 +14,8 @@
     "prettier": "^1.9.2"
   },
   "dependencies": {
-    "babel-cli": "^6.26.0"
+    "babel-cli": "^6.26.0",
+    "eslint": "^4.18.2"
   },
   "scripts": {
     "start": "concurrently --kill-others \"yarn run dev\" \"yarn run dev-server\" \"yarn run json-server\"",
