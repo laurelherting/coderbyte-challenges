@@ -8,13 +8,16 @@ const assert = require('assert');
 // Output:84
 
 function NumberAddition(str) {
-  const numsArray = str.match(/\d+/g);
-  if (numsArray === null) {
-    return 0;
+  const pattern = /\d*/g;
+  const numbers = str.match(pattern);
+  let number = 0;
+
+  for (let i = 0; i < numbers.length; i += 1) {
+    if (numbers[i] !== ',') {
+      number += Number(numbers[i]);
+    }
   }
-  return numsArray.reduce(
-    (acc, curr) => parseInt(acc, 10) + parseInt(curr, 10)
-  );
+  return number;
 }
 console.log(NumberAddition('75Number9'));
 // console.log("NumberAddition");
