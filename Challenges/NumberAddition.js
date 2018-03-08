@@ -20,9 +20,8 @@ function NumberAddition(str) {
   return number;
 }
 console.log(NumberAddition('75Number9'));
-// console.log("NumberAddition");
 
 const in1 = '75Number9'; // input
-const expect1 = '84'; // output
+const r1 = '84'; // output
 const test1 = NumberAddition(in1);
-assert.strictEqual(test1, expect1, `should be ${expect1}`);
+assert(r1);
