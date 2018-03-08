@@ -1,7 +1,14 @@
 {
-  "name": "hss-headspace",
+  "name": "coderbyte-challenges",
   "version": "0.1.0",
   "license": "MIT",
+  "author": {
+    "name": "Laurel Herting",
+    "url": "https://github.com/laurelherting/coderbyte-challenges"
+  },
+  "repository": {
+    "type": "git"
+  },
   "devDependencies": {
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
