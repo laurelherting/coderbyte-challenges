@@ -17,6 +17,6 @@ const t1 = AlphabetSoup(a1);
 console.log(r1);
 assert(t1, r1);
 
-// const a2 = 'whoosh'; //input
+// const a2 = 'whoosh';
 const r2 = 'oohhsw'; // output
 console.log(r2);
