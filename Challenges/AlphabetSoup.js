@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-function AlphabetSoup(str) {
+const AlphabetSoup = str => {
   // convert the string into an array of characters
   const chars = str.split('');
 
@@ -9,7 +9,7 @@ function AlphabetSoup(str) {
 
   // return the newly sorted string
   return sorted.join('');
-}
+};
 
 const a1 = 'AlphabetSoup';
 const r1 = 'whoosh';
