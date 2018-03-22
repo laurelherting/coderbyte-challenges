@@ -1,43 +1,22 @@
 const assert = require('assert');
 
-// First take the string and use split() to separate it out into an array. 
-// Provide an empty string into split() so the string is split between every character.
-// A separate function called removeSpaces() that takes an array, loops over it, and returns a new array without any spaces.
-
 function AlphabetSoup(str) {
-    let alphabetizedString;
-    let separatedString = str.split('');
-    
-    // Create function that removes spaces
-    function removeSpaces( array ) {
-        const cleanArray = [];
-     
-        // Loop over the array. Remove spaces if they exist.
-        array.forEach(function( element ) {
-            if ( element !== " " ) {
-                cleanArray.push( element );
-            }
-        });
-         
-        // Return new array without spaces
-        return cleanArray;
-    }
-    
-    // Alphabetize the array and convert to string
-    alphabetizedString = ( removeSpaces( separatedString ).sort() ).join('');
- 
-    // Return completed string
-    return alphabetizedString; 
+  // convert the string into an array of characters
+  const chars = str.split('');
+
+  // sort the array in alphabetical order
+  const sorted = chars.sort();
+
+  // return the newly sorted string
+  return sorted.join('');
 }
 
-const a1 = "AlphabetSoup";
-const r1 = "whoosh";
-
+const a1 = 'AlphabetSoup';
+const r1 = 'whoosh';
 const t1 = AlphabetSoup(a1);
 console.log(r1);
 assert(t1, r1);
-// input: "whoosh"
-// output: "oohhsw"
-const a2 = "whoosh";
-const r2 = "oohhsw";
+
+// const a2 = 'whoosh'; //input
+const r2 = 'oohhsw'; // output
 console.log(r2);
