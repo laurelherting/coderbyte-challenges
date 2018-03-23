@@ -6,6 +6,7 @@ const DivisionStringified = (num1, num2) => {
 
   // use the .split method to convert into an array
   div = div.toString().split('');
+
   let insert = 0;
 
   // insert a comma every 3 elements in array starting from the end
