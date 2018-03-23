@@ -1,29 +1,27 @@
 const assert = require('assert');
 
 const DivisionStringified = (num1, num2) => {
-
   // Divide, then round accordingly
-  const result = Math.round(num1 / num2).toString(),
+  let div = Math.round(num1 / num2);
 
-  // use the .split method to convert the result variable into an array
-    resultArr = result.split('');
+  // use the .split method to convert into an array
+  div = div.toString().split('');
+  let insert = 0;
 
-  // check if the result is greater than 1000
-  if (result >= 1000) {
-
-    // If so, loop through each item in the array
-    // starting at the third character from the end (i = result.length - 3)
-    // moving back three characters each time (i -= 3)
-    // stopping at the start of the string (i > 0)
-    for (let i = result.length - 3; i > 0; i -= 3) {
-
-    // At every third character use the .splice method to insert a comma
-      resultArr.splice(i, 0, ',');
+  // insert a comma every 3 elements in array starting from the end
+  // then, join all numbers in a string
+  if (div.length > 3) {
+    for (let i = div.length - 1; i >= 0; i -= 1) {
+      insert += 1;
+      if (insert === 3) {
+        div[1] = `,${div[i]}`;
+        insert = 0;
+      }
     }
   }
 
-  // Lastly, return the result array with the .join method to covert it into a string.
-  return resultArr.join('');
+  // return string
+  return div.join('');
 };
 
 console.log(DivisionStringified(209, 35, 2));
