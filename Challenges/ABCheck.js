@@ -1,20 +1,11 @@
 const assert = require('assert');
 
-function ABCheck(str) {
-    let arr = str.split("");
-    let flag = "false";
+const ABCheck = str => {
+  const ab = /[a]...b/.test(str);
 
-    arr.filter( function( value, index ) {
-        if( value === "a" && arr[index + 4] === "b") { flag = "true"; }
-        if( value === "b" && arr[index + 4] === "a") { flag = "true"; }
-    });
-    return flag;
-}
-// console.log("Laurie laughs");
+  return ab;
+};
 
-const a1 = "Laurie laughs";
-const r1 = "this is it";
-
-const t1 = ABCheck(a1);
-// console.log(r1);
-assert(t1, r1);
+console.log(ABCheck('aj44ikb'));
+const r1 = 'false';
+assert(r1);
