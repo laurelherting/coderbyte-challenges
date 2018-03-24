@@ -1,44 +1,44 @@
 const assert = require('assert');
 // catch invalid strings instead of valid ones
 
-function SimpleSymbols(str) {
-if (str[0] >= 'a' || str[str.length - 1] >= 'a') {
+const SimpleSymbols = str => {
+  if (str[0] >= 'a' || str[str.length - 1] >= 'a') {
     return false;
-  } else {
-    for (var i = 1; i < str.length - 1; i++) {
-      if (str[i] >= 'a') {
-        if (str[i + 1] !== '+' || str[i - 1] !== '+') {
-          return false;
-        }
+  }
+  for (let i = 1; i < str.length - 1; i += 1) {
+    if (str[i] >= 'a') {
+      if (str[i + 1] !== '+' || str[i - 1] !== '+') {
+        return false;
       }
     }
   }
+
   return true;
-}
+};
 
 const a = [
-    // valid
-    "++b+===+c++==+a++",
-    "+a+a+a+",
-    "+a++a+",
-    "+a+",
-    // invalid
-    "++b+===+c++==a",
-    "+=b+",
-    "+bb+",
-    "+b=+",
-    "+b+b",
-    "b+b+"
+  // valid
+  '++b+===+c++==+a++',
+  '+a+a+a+',
+  '+a++a+',
+  '+a+',
+  // invalid
+  '++b+===+c++==a',
+  '+=b+',
+  '+bb+',
+  '+b=+',
+  '+b+b',
+  'b+b+',
 ];
-const r = /^[+=\d]*\+(?:[a-z]\+[+=\d]*)+$/mi;
 
-a.forEach(function(s){
-console.log(r.test(s));
+const r = /^[+=\d]*\+(?:[a-z]\+[+=\d]*)+$/im;
+
+a.forEach(s => {
+  console.log(r.test(s));
 });
 
 SimpleSymbols('++=+f+4=+s+'); // -> true;
 
-const a1 = "true";
-const r1 = "false";
+const r1 = 'false';
 
 assert(r1);
