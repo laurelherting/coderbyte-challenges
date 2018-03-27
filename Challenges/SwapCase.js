@@ -8,7 +8,7 @@ const assert = require('assert');
 // lowercase -> uppercase
 // return modified array as a string
 
-function swapCase(str) {
+const swapCase = str => {
   const chars = str.split('');
 
   for (let i = 0; i < chars.length; i += 1) {
@@ -22,7 +22,7 @@ function swapCase(str) {
   const caseStr = chars.join('');
   console.log(caseStr);
   return caseStr;
-}
+};
 
 const in1 = 'Hello-World'; // input
 const expect1 = 'hELLO-wORLD'; // output
