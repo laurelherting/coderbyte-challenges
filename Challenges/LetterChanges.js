@@ -15,7 +15,7 @@ const LetterChanges = str => {
   );
 
   // after converting each letter to the letter following it
-  // in the alphabet, and all we need to do now is capitalize the vowels
+  // in the alphabet, we need capitalize the vowels
   const capitalized = converted.replace(/a|e|i|o|u/gi, vowel =>
     vowel.toUpperCase()
   );
