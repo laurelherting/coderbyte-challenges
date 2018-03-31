@@ -1,43 +1,35 @@
 const assert = require('assert');
-// Have func LetterChanges(str) take the str parameter being 
-// passed & modify it using this algorithm: 
-// Replace every letter in string with the letter following it in 
-// the alphabet(ie. c becomes d). Then, capitalize every vowel in 
+// Have func LetterChanges(str) take the str parameter being
+// passed & modify it using this algorithm:
+// Replace every letter in string with the letter following it in
+// the alphabet(ie. c becomes d). Then, capitalize every vowel in
 // this new string and finally return modified string.
 
-function LetterChanges(str) { 
+const LetterChanges = str => {
+  const converted = str.replace(
+    /[a-z]/gi,
+    char =>
+      char === 'z' || char === 'Z'
+        ? 'a'
+        : String.fromCharCode(char.charCodeAt() + 1)
+  );
 
-  let letters = "abcdefghijklmnopqrstuvwxyz"
-      let newArray = [];
-  
-  for (let i = 0; i < str.length; i++) {
-      
-      if(letters.indexOf(str[i]) == -1) {
-               newArray.push(str[i]);
-      } else {
+  // after converting each letter to the letter following it
+  // in the alphabet, we need capitalize the vowels
+  const capitalized = converted.replace(/a|e|i|o|u/gi, vowel =>
+    vowel.toUpperCase()
+  );
 
-      let letr = letters[letters.indexOf(str[i])+1];
-        if (letr == "a" | letr == "e" | letr == "i" | letr == "o" | letr == "u") {
+  // return the final string
+  return capitalized;
+};
 
-        newArray.push(letr.toUpperCase());
-        } else {
+const a1 = 'challenge';
+const r1 = 'dibmmfohf';
 
-        newArray.push(letr);
-        }
-
-      }
-  }
-  str = newArray.join("");
-  return str;
-}
-
-const a1 = "challenge";
-const r1 = "dibmmfohf";
-
-const t1 = LetterChanges(a1);                            
+const t1 = LetterChanges(a1);
 console.log(r1);
 assert(t1, r1);
-const a2 = "dibmmfohf";
-const r2 = "dIbmmfOhf";
+const r2 = 'dIbmmfOhf';
 
 console.log(r2);
