@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-function DashInsert(str) {
+const DashInsert = str => {
   const arr = str.split('');
   for (let i = 0; i < str.length - 1; i += 1) {
     if (arr[i] % 2 !== 0 && arr[i + 1] % 2 !== 0) {
@@ -12,7 +12,7 @@ function DashInsert(str) {
   console.log(str);
 
   return arr.join('');
-}
+};
 
 const in1 = '1234567'; // input
 const expect1 = '1234567'; // output
