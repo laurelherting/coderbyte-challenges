@@ -93,7 +93,13 @@
           ]
         }
       ]
+
     },
+    "param-reassign": [2, { 
+                "props": false
+            }]
+      },
+    "extends": "eslint-config-airbnb"}],
     "globals": {
       "fetch": true,
       "describe": true,
