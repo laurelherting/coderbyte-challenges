@@ -2,6 +2,7 @@ const assert = require('assert');
 
 const BinaryReversal = str => {
   const val = Number(str).toString(2);
+
   return parseInt(
     val
       .padStart(Math.ceil(val.length / 8) * 8, '0')
@@ -10,10 +11,13 @@ const BinaryReversal = str => {
       .join(''),
     2
   );
+
+  // console.log('err here');
 };
 
-const a1 = '213'; // input
-const r1 = '171'; // output
+console.log(BinaryReversal);
 
-const t1 = BinaryReversal(a1);
-assert.strictEqual(t1, r1);
+const in1 = '213'; // input
+const expect1 = '171'; // output
+const test1 = BinaryReversal(in1);
+assert.strictEqual(test1, expect1);
