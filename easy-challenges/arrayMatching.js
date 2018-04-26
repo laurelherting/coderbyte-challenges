@@ -18,13 +18,13 @@ const ArrayMatching = strArr => {
   return temp.join('-');
 };
 
-const a1 = "'[5, 2, 3]', '[2, 2, 3, 10, 6]'"; // input
+const a1 = '5, 2, 3, 2, 2, 3, 10, 6'; // input
 const r1 = '7-4-6-10-6'; // output
 
 const t1 = ArrayMatching(a1);
 assert.strictEqual(t1, r1);
 
-const a2 = "'[1, 2, 1]', '[2, 1, 5, 2]'"; // input
+const a2 = '1, 2, 1, 2, 1, 5, 2'; // input
 const r2 = '3-3-6-2'; // output
 
 const t2 = ArrayMatching(a2);
