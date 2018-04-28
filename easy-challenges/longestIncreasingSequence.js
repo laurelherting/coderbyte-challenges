@@ -2,7 +2,9 @@ const assert = require('assert');
 
 const LongestIncreasingSequence = arr => {
   const LNG = arr.length;
-  let max = 0;
+  let max = [];
+
+  // check for possible number combinations
   for (let i = 0; i < LNG - 1; i += 1) {
     const subSet = [arr[i]];
     for (let n = i + 1; n < LNG; n += 1) {
@@ -13,6 +15,7 @@ const LongestIncreasingSequence = arr => {
     if (subSet.length > max) {
       max = subSet.length;
     }
+    // console.log(arr);
   }
   return max;
 };
