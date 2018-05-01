@@ -17,9 +17,6 @@ const LongestIncreasingSequence = arr => {
   return max;
 };
 
-const a1 = '[9, 9, 4, 2]'; // input
-const r1 = 1; // output
-const t1 = LongestIncreasingSequence(a1);
-assert.strictEqual(t1, r1);
-
+const t1 = LongestIncreasingSequence([9, 9, 4, 2]); // input
 // console.log(t1);
+assert.strictEqual(t1, 1, 'Input [9, 9, 4, 2] should yield Output 1');
