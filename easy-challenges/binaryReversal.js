@@ -1,27 +1,20 @@
 const assert = require('assert');
 
 const BinaryReversal = str => {
+  let num = Number(str).toString(2);
+  while (num.length % 8) {
+    num = `0${num}`;
+  }
 
-  // first, convert int to binary
-  let num = Number(str).toString(2).toString(); 
-
-    // add 0 at beginning to create blocks of 8 bits
-    while (num.length % 8 !== 0) { 
-      num = '0' + num;    
-    }
-    
-    // reverse binary number
-    rev = num.split('').reverse().join(''); 
-
-    // now, convert binary to int
-    int = parseInt(rev, 2); 
-
-    return int; 
+  return parseInt(
+    num
+      .split('')
+      .reverse()
+      .join(''),
+    2
+  );
 };
 
-// console.log(int);
-
-const in1 = '213'; // input
-const expect1 = '171'; // output
-const test1 = BinaryReversal(in1);
-assert.strictEqual(test1, expect1);
+const t1 = BinaryReversal(213); // input
+console.log(t1);
+assert.strictEqual(t1, 171, 'Input 213 should yield Output 171');
