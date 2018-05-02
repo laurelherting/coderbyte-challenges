@@ -4,7 +4,7 @@ const ArrayMatching = strArr => {
   const temp = [];
   const strArr01 = strArr[0].replace(/[[\]]/gi, '').split(',');
   const strArr02 = strArr[1].replace(/[[\]]/gi, '').split(',');
-  // console.log(strArr1);
+  // console.log(strArr01);
   const len =
     strArr01.length > strArr02.length ? strArr01.length : strArr02.length;
   for (let i = 0; i < len; i += 1) {
