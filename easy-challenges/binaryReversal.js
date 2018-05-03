@@ -2,6 +2,8 @@ const assert = require('assert');
 
 const BinaryReversal = str => {
   let num = Number(str).toString(2);
+
+  // add leading zeroes to make the number an integral number
   while (num.length % 8) {
     num = `0${num}`;
   }
