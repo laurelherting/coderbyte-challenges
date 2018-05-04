@@ -1,27 +1,15 @@
 const assert = require('assert');
 
 const ArrayMatching = strArr => {
-  const long = strArr[0];
-  const short = strArr[1];
-  // const length = Math.max(long.length, short.length);
-  // length long = long.slice(1, -1).split(',');
-  // short = short.slice(1, -1).split(',');
+  const arr1 = strArr[0].replace(/[[]]/g, '').split(',');
+  const arr2 = strArr[1].replace(/[[]]/g, '').split(',');
 
-  let newStr = '';
-  for (let i = 0; i < long.length; i += 1) {
-    if (short[i] !== undefined) {
-      const temp = Number(long[i]) + Number(short[i]);
-      newStr += `${temp} `;
-    } else {
-      newStr += long[i];
-    }
-  }
+  const long = arr1.length >= arr2.length ? arr1 : arr2;
+  const short = long === arr1 ? arr2 : arr1;
 
-  newStr = newStr.split(' ');
-  const index = newStr.indexOf('');
-  newStr.splice(index, 1);
+  const summed = long.map((n, i) => Number(n) + Number(short[i] || 0));
 
-  return newStr.join('-');
+  return summed.join('-');
 };
 
 const a1 = '5, 2, 3, 2, 2, 3, 10, 6'; // input
