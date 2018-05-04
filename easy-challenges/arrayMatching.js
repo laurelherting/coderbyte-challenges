@@ -1,3 +1,7 @@
+// This challenge can be solved by creating a new
+// array, then looping through one of the arrays and
+// adding each element with the corresponding element
+// in the other array, and storing this sum in the new array.
 const assert = require('assert');
 
 const ArrayMatching = strArr => {
@@ -8,17 +12,16 @@ const ArrayMatching = strArr => {
   const short = long === arr1 ? arr2 : arr1;
 
   const summed = long.map((n, i) => Number(n) + Number(short[i] || 0));
-
   return summed.join('-');
 };
 
-const a1 = '5, 2, 3, 2, 2, 3, 10, 6'; // input
-const r1 = '7-4-6-10-6'; // output
+const a1 = '[5, 2, 3], [2, 2, 3, 10, 6]'; // input
+// const r1 = '7-4-6-10-6'; // output
 
 const t1 = ArrayMatching(a1);
-assert(t1, r1);
+assert(t1);
 
-const a2 = '1, 2, 1, 2, 1, 5, 2'; // input
+const a2 = '[1, 2, 1], [2, 1, 5, 2]'; // input
 const r2 = '3-3-6-2'; // output
 
 const t2 = ArrayMatching(a2);
