@@ -1,25 +1,33 @@
-// use prime sieve to generate a list
+// use prime sieve to generate a list of primes
+// up to the limit
 const assert = require('assert');
-const primeMover = num  => {
-  if (num < 1) { return 'invalid'; }
-  if (num === 1) { return 2; }
+const sieve = limit  => {
 
-  const count = 1;
-  let n = 3;
-  while (count != num) {
-    for (let i = 2; i < n; i+= 1) {
-      if (i === n-1) {
-      count++;
-        break;
-      }
-      else if (n % i === 0) {
-        break;
+  let bools = [];
+  let primes = [];
+
+  // create list of booleons
+  for (let i = 1; i < limit; i+= 1) { bools.push(true); }
+
+  // loop to limit by setting to false
+  for (let i = 2; i < limit; i+= 1) {
+    if (bools[i-2]) {
+      for (let j = i*2; j<= limit; j += 1) {
+        bools[j-2] = false;
       }
     }
   }
-  return n-1;
+
+  // generate list of primes where there is a
+  // true value in booleon array
+  for (let p = 0; p < bools.length; p++) {
+    if (bools[p]) { primes.push(p+2); }
+  }
+
+  return primes;
+
 };
 
-const a1 = '9'// input
-const t1 = primeMover(a1);
+const a1 = '16'// input
+const t1 = sieve(a1);
 assert(t1);
