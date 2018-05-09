@@ -1,33 +1,44 @@
 // use prime sieve to generate a list of primes
 // up to the limit
 const assert = require('assert');
-const sieve = limit  => {
+const PrimeMover = num => {
 
-  let bools = [];
-  let primes = [];
+  // negative numbers cannot be primes
+  if (num < 1) { return 'invalid'; }
 
-  // create list of booleons
-  for (let i = 1; i < limit; i+= 1) { bools.push(true); }
+  // first prime number is 2, the only even prime
+  if (num === 1) { return 2; }
 
-  // loop to limit by setting to false
-  for (let i = 2; i < limit; i+= 1) {
-    if (bools[i-2]) {
-      for (let j = i*2; j<= limit; j += 1) {
-        bools[j-2] = false;
+  // if greater than 2, start count at 1
+  let count = 1;
+  let n = 3;
+
+  // loop until the numth prime
+  while (count != num) {
+
+    // check if n is divisible by each number in between to see if it is a prime
+    for (let i = 2; i < n; i+= 1) {
+
+      // if reach the end, this number is a prime because it was
+      // not divisible by any numbers so increase the count by 1
+      if (i === n-1) {
+        count+= 1;
+        n+= 1;
+        break;
+      }
+      // if n is divisible by some number, then it is not a prime
+      // and simply move on to the next number
+      else if (n % i === 0) {
+        n+= 1;
+        break;
       }
     }
   }
 
-  // generate list of primes where there is a
-  // true value in booleon array
-  for (let p = 0; p < bools.length; p++) {
-    if (bools[p]) { primes.push(p+2); }
-  }
-
-  return primes;
+  return n-1;
 
 };
 
 const a1 = '16'// input
-const t1 = sieve(a1);
+const t1 = PrimeMover(a1);
 assert(t1);
