@@ -20,8 +20,10 @@ const swapCase = str => {
   }
 
   const caseStr = chars.join('');
-  console.log(caseStr);
+  // console.log(caseStr);
+
   return caseStr;
+
 };
 
 const in1 = 'Hello-World'; // input
