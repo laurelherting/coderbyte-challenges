@@ -39,6 +39,6 @@ const PrimeMover = num => {
 
 };
 
-const a1 = '16'// input
-const t1 = PrimeMover(a1);
+t1 = PrimeMover(8);
+console.log(t1);
 assert(t1);
