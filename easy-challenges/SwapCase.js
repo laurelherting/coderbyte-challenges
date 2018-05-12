@@ -21,7 +21,6 @@ const swapCase = str => {
 
   const caseStr = chars.join('');
   // console.log(caseStr);
-
   return caseStr;
 
 };
@@ -31,3 +30,7 @@ const expect1 = 'hELLO-wORLD'; // output
 const test1 = swapCase(in1);
 assert.strictEqual(test1, expect1, `should be ${expect1}`);
 // console.log('swapCase');
+
+t2 = swapCase('LengThforC');
+console.log(t2);
+assert(t2);
