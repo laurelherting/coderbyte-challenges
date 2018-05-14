@@ -3,13 +3,13 @@ const assert = require('assert');
 const PalindromeTwo = str => {
 
   // match only numbers and letters, ignore punctuation
-  let arr = str.match(/[a-z0-9]+/gi);
+  let arr = str.replace(/[a-z0-9]+/gi).toLowerCase();
 
   // join into string
-  let joined = arr.join('').toLowerCase();
+  let joined = arr.split('').reverse().join('');
 
   // check for palindrome
- return joined === joined.split('').reverse().join('');
+  return arr === joined;
 
 };
 
