@@ -10,9 +10,11 @@ const Palindrome = str => {
   if (z === init) {
     return true;
   }
+
   return false;
 };
-// console.log('Pendulum');
+
+console.log('Pendulum');
 const a1 = 'A weight, suspended from pivot. It can swing freely.';
 const t1 = Palindrome(a1);
 assert(t1);
