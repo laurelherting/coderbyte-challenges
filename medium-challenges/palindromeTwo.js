@@ -1,32 +1,21 @@
-// check the end from each part and divide the
-// number of iterations inside the FOR loop by two.
 const assert = require('assert');
 
 const PalindromeTwo = str => {
 
   // match only numbers and letters, ignore punctuation
-  let re = /[^A-Za-z0-9]/g;
+  let re = /[\W_]/g;
 
   let lowRegStr = str.toLowerCase().replace(re, '');
+  // str.toLowerCase() = "Tony - sees Gizmo".toLowerCase() = "tony - sees gizmo"
+  // str.replace(/[\W_]/g, '') = "tony - sees gizmo".replace(/[\W_]/g, '') = "tonyseesgizmo"
+  // let lowRegStr = "tonyseesgizmo";
 
-  // Create the FOR loop
-  let len = str.length;
-  for (let i = 0; i < len/2; i+= 1) {
-   if (str[i] !== str[len - 1 - i]) {
-       return false;
-   }
- }
-
- return true;
+  return lowRegStr === lowRegStr.split('').reverse().join('');
 }
 
-// console.log(PalindromeTwo("Tony - sees Gizmo"));
-// palindromeTwo("Tony - sees Gizmo");
+PalindromeTwo("Tony - sees Gizmo");
 
-t1 = PalindromeTwo("Tony - sees Gizmo");
-console.log(t1);
-assert(t1);
-
-// Input:'Tony - sees Gizmo'
-
-// Output:"true"
+const a1 = "Tony - sees Gizmo"; // input
+const r1 = "tonyseesgizmo"; // output
+const t1 = PalindromeTwo(a1);
+assert.strictEqual(t1, r1, `should be ${r1}`);
