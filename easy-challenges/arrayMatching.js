@@ -17,12 +17,14 @@ const ArrayMatching = strArr => {
 
 const a1 = '[5, 2, 3], [2, 2, 3, 10, 6]'; // input
 // const r1 = '7-4-6-10-6'; // output
-
 const t1 = ArrayMatching(a1);
 assert(t1);
 
 const a2 = '[1, 2, 1], [2, 1, 5, 2]'; // input
-const r2 = '3-3-6-2'; // output
-
+// const r2 = '3-3-6-2'; // output
 const t2 = ArrayMatching(a2);
-assert(t2, r2);
+assert(t2);
+
+// t1 = ArrayMatching([1, 2, 1], [2, 1, 5, 2]);
+console.log(t1);
+assert(t1);
