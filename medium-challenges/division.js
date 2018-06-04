@@ -10,10 +10,11 @@ const division = (num1, num2) => {
   // use function until it a or b hits 0
   while (a > 0 && b > 0) {
     r = a % b;
-    a = b; b = r;
+    a = b;
+    b = r;
 }
 
-  return (a === 0);
+  return (a === 0) ?  b : a;
 
 };
 
