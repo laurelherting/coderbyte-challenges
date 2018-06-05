@@ -2,8 +2,8 @@ const assert = require('assert');
 
 const alphabetSearching = str => {
   let array = str.split('');
-  for (let i = 97; i+= 1) {
-    if () {
+  for (let i = 97; i <= 122; i+= 1) {
+    if (!array.includes(String.fromCharCode(i))) {
        return false;
     }
   }
