@@ -1,24 +1,25 @@
 const assert = require('assert');
 
+// Take the string parameter being passed and return the string
+// true if every letter from alphabet exists in the string. 
+// Or else, return false.
+
 const alphabetSearching = str => {
-  let array = str.split('');
+  const array = str.split('');
+
   for (let i = 97; i <= 122; i+= 1) {
     if (!array.includes(String.fromCharCode(i))) {
-    // console.log(alphabetSearching);
        return false;
     }
   }
 
-  console.log(test1);
+  // console.log(array);
   return true;
 };
 
-const in1 = "abcdefghijklmnopqrstuvwxyyyy";
-const expect1 = "false";
-const test1 = alphabetSearching(in1);
-assert.strictEqual(test1, expect1, `should be ${expect1}`);
+const a1 = 'gbjkbvnienjnvaabc';
+const r1 = 'true';
+const t1 = alphabetSearching(a1);
 
-const in2 = "abc123456kmo";
-const expect2 = "false";
-const test2 = alphabetSearching(in2);
-assert.strictEqual(test2, expect2, `should be ${expect2}`);
+// console.log(r1);
+assert(r1, t1);
