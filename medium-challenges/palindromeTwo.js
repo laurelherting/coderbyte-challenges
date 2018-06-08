@@ -14,10 +14,9 @@ const PalindromeTwo = str => {
 console.log(lowRegStr);
 }
 
-const a1 = "Anne, I vote more cards race Rome-to-Vienna"; // input
-// const r1 = "anneivotemorecarsracerometovienna"; // output
+const a1 = 'Anne, I vote more cards race Rome-to-Vienna'; // input
+const r1 = 'anneivotemorecarsracerometovienna'; // output
 const t1 = PalindromeTwo(a1);
-// assert.strictEqual(t1, r1, `should be ${r1}`);
-assert(t1);
 
-console.log(PalindromeTwo("Anne, I vote more cars race Rome-to-Vienna"));
+console.log(r1);
+assert(r1, t1);
