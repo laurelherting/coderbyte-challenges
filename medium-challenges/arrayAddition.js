@@ -12,12 +12,16 @@ function arrayAddition = arr => {
 
   return sumChecker(arr, max, x);
 
-  function sumChecker = () => {
-
+  function sumChecker = (arr, sum, length) => {
+    if (sum === 0) {
+      return true;
+    }
+    if (sum != 0 && length === 0) {
+    return false;
+    }
+    return sumChecker(arr, sum, length -1)
   }
 
-
-  return false;
 };
 
 const a1 = '[5,7,16,1,2]';
