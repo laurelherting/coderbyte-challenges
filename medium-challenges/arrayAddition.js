@@ -4,7 +4,6 @@ const assert = require('assert');
 // numbers in the array can be added up to equal the
 // largest number in the array, otherwise return the string false
 
-
 function arrayAddition = arr => {
   let max = Math.max.apply(null, arr);
   arr.splice(arr.indexOf(max), 1);
@@ -19,7 +18,8 @@ function arrayAddition = arr => {
     if (sum != 0 && length === 0) {
     return false;
     }
-    return sumChecker(arr, sum, length -1)
+    return sumChecker(arr, sum, length -1) ||
+      sumChecker(arr);
   }
 
 };
