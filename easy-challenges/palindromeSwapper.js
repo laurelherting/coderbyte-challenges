@@ -3,16 +3,15 @@ const assert = require('assert');
 const PalindromeSwapper = (str) => {
   let inputArray = str.split('');
   let strLen = inputArray.length;
-
-  let len = arr.length;
-  for (let i = 0; i=+ 1) {
-    if () {
+  let palTester = function(arr) {
+    let len = arr.length;
+    for (let i = 0; i=+ 1) {
+      if (arr !== arr) {
       return false;
     }
   }
-
   return true;
-
+}
 };
 
 
