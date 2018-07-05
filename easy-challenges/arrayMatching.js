@@ -4,14 +4,14 @@
 // in the other array, and storing this sum in the new array.
 const assert = require('assert');
 
-const ArrayMatching = strArr => {
+const ArrayMatching = (strArr) => {
   const arr1 = strArr[0].replace(/[[]]/g, '').split(',');
   const arr2 = strArr[1].replace(/[[]]/g, '').split(',');
 
   const long = arr1.length >= arr2.length ? arr1 : arr2;
   const short = long === arr1 ? arr2 : arr1;
-
   const summed = long.map((n, i) => Number(n) + Number(short[i] || 0));
+
   return summed.join('-');
 };
 
@@ -24,3 +24,4 @@ const t2 = ArrayMatching(a2);
 assert(t2);
 
 // console.log(t1);
+console.log(t1);
