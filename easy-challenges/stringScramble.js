@@ -1,3 +1,10 @@
+// Determine if string 1 can be rearranged to match string 2
+//Solve by looping through the second string and check if
+//each character exists in the first string
+// Start: take both parameters being passed and return the string
+// true if a portion of str1 characters can be rearranged to match
+// str2, otherwise return the string false
+
 const assert = require('assert');
 
 // loop through string 2
