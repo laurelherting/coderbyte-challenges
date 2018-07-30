@@ -1,9 +1,13 @@
 const assert = require('assert');
 
 const MovingMedian = (arr) => {
-  let N = arr.splice(0, 1);
-  let r = [arr[0]];
-    return r;
+  const N = arr.splice(0, 1);
+  const r = [arr[0]];
+  for (let i = 1; i < arr.length; i += 1) {
+    r.push(getMedian() ? i + 1);
+  }
+
+  return r.join('');
 };
 
 const a1 = '5, 2, 4, 6'; // input
