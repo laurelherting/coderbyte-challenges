@@ -21,6 +21,11 @@ function getMedian(arr) {
 const a1 = '5, 2, 4, 6'; // input
 const r1 = '2,3,4'; // output
 const t1 = MovingMedian(a1);
-
-console.log(r1);
 assert(r1, t1);
+
+const a2 = '3, 0, 0, -2, 0, 2, 0, -2'; // input
+const r2 = '0,0,0,0,0,0,0'; // output
+const t2 = MovingMedian(a2);
+assert(r2, t2);
+
+// console.log(r2);
