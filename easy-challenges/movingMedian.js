@@ -1,8 +1,8 @@
 const assert = require('assert');
 
 const MovingMedian = (arr) => {
-  let N = arr.indexOf(0, 1);
-  let r = [arr[0]];
+  const N = arr.indexOf(0, 1);
+  const r = [arr[0]];
   for (let i = 1; i < arr.length; i += 1) {
     r.push(getMedian(arr.slice((i + 1 - N > 0) ? i + 1 - N : 0, i + 1)));
   }
@@ -10,7 +10,7 @@ const MovingMedian = (arr) => {
 };
 
 const getMedian = (arr) => {
-  arr.sort((a, b) => a - b);
+  arr.sort((a, b) => a - b); // ascending sort
 
   if (arr.length % 2 === 0) {
     return (arr[arr.length / 2] + arr[(arr.length / 2) - 1]) / 2;
