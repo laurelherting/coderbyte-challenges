@@ -16,8 +16,15 @@ const groupTotals = (strArr) => {
       counts[pairs[i][0]] += parseInt(pairs[i][1]);
     }
   }
- let returnArr = [];
-  return();
+  let returnArr = [];
+  for (let key in counts) {
+    if (counts[key] !== 0) {
+      returnArr.push(`${key}:${counts[key]}`);
+    }
+  }
+
+  return returnArr.sort().join(',');
+
 };
 
 const a1 = '["Z:0", "A:-1"]'; // input
