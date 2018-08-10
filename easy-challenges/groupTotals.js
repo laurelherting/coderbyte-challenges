@@ -34,3 +34,8 @@ const r1 = 'A:-1';
 // of 0 after being summed up
 const t1 = groupTotals(a1);
 assert(r1, t1);
+
+const a2 = '["X:-1", "Y:1", "X:-4", "B:3", "X:5"]'; // input
+const r2 = 'B:3,Y:1'; // output
+const t2 = groupTotals(a2);
+assert(r2, t2);
