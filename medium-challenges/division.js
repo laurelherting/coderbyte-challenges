@@ -1,7 +1,11 @@
 const assert = require('assert');
 
+// take both parameters being passed and
+// return the Greatest Common Factor
+// (return the greatest number that evenly
+// goes into both numbers with no remainder)
+// Euclidean algorithm
 const division = (num1, num2) => {
-
   // set up variables
   let a = num1;
   let b = num2;
@@ -15,11 +19,10 @@ const division = (num1, num2) => {
   }
 
   // return the non-zero answer
-  return (a === 0) ?  b : a;
-
+  return (a === 0) ? b : a;
 };
 
-
-const a1 = '36, 54'; // input
+const a1 = '7 & num2 = 3'; // input
+const r1 = '1'; // output
 const t1 = division(a1);
-assert(t1);
+assert(r1, t1);
