@@ -9,16 +9,19 @@ const assert = require('assert');
 
 // loop through string 2
 const StringScramble = (str1, str2) => {
-  for (let i = 0; str2.length; i += 1) {
+for (let i = 0; i < str2.length; i += 1) {
+  // check if each character also exists in string 1
+  // if not, return false
     if (str1.indexOf(str2.charAt(i)) === -1) {
       return false;
     }
   }
 
+  // return true if all characters exist in string 1
   return true;
 };
 
-console.log(StringScramble('cdore & str2 = coder'));
+// console.log(StringScramble('rkqodlw', 'world'));
 
 const in1 = 'cdore & str2 = coder'; // input
 const r1 = 'true'; // output
