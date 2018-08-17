@@ -26,3 +26,9 @@ const a1 = '7 & num2 = 3'; // input
 const r1 = '1'; // output
 const t1 = division(a1);
 assert(r1, t1);
+// console.log(division(188));
+
+const a2 = '36 & num2 = 54'; // input
+const r2 = '18'; // output
+const t2 = division(a2);
+assert(r2, t2);
