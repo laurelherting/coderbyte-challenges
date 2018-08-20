@@ -4,7 +4,7 @@ const assert = require('assert');
 // return 1 + the additive persistence of new number
 // if there's just one number, return 0
 
-const AdditivePersistence = num => {
+const AdditivePersistence = (num) => {
   const arr = num.toString().split('');
 
   while (arr.length > 1) {
@@ -16,8 +16,8 @@ const AdditivePersistence = num => {
   }
 
   return 0;
-}
+};
 
-console.log(AdditivePersistence('3891'));
+// console.log(AdditivePersistence('3891'));
 const r1 = 'addPer';
 assert(r1);
