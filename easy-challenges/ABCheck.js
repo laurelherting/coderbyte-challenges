@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-const ABCheck = str => {
+const ABCheck = (str) => {
   const ab = /[a]...b/.test(str);
 
   return ab;
