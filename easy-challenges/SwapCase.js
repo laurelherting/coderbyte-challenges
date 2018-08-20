@@ -8,7 +8,7 @@ const assert = require('assert');
 // lowercase -> uppercase
 // return modified array as a string
 
-const swapCase = str => {
+const swapCase = (str) => {
   const chars = str.split('');
 
   for (let i = 0; i < chars.length; i += 1) {
@@ -22,7 +22,6 @@ const swapCase = str => {
   const caseStr = chars.join('');
   // console.log(caseStr);
   return caseStr;
-
 };
 
 const in1 = 'Hello-World'; // input
@@ -31,6 +30,6 @@ const test1 = swapCase(in1);
 assert.strictEqual(test1, expect1, `should be ${expect1}`);
 // console.log('swapCase');
 
-t2 = swapCase('LengThforC');
-console.log(t2);
+const t2 = swapCase('LengThforC');
 assert(t2);
+// console.log(t2);
