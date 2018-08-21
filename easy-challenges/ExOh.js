@@ -1,7 +1,7 @@
 const assert = require('assert');
 
 // step by step
-const ExOh = str => {
+const ExOh = (str) => {
   // declare two variables
   // One removes all characters in str that aren't x's
   const strX = str.replace(/[^x]/g, '');
@@ -43,5 +43,4 @@ const ExOh = str => {
 */
 console.log(ExOh('xoxxox'));
 const r1 = 'false';
-
 assert(r1);
