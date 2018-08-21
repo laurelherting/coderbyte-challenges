@@ -1,12 +1,13 @@
 const assert = require('assert');
 
-const CamelCase = (str) => {
-  str.split(/\W/).map((word, i) => {
-    const formatted = word.toLowerCase();
-    return i ? `${formatted[0].toUpperCase()}${formatted.slice(1)}` : formatted;
-  }).join('');
-};
-console.log(CamelCase('cats AND*Dogs-are Awesome'));
+function CamelCase(str) {
+  return str.replace(/(?:^\w|[A-Z]|\b\w|\s+)/g, (match, index) => {
+    if (+match === 0) return '';
+    return index === 0 ? match.toLowerCase() : match.toUpperCase();
+  });
+}
+
+// console.log(CamelCase('cats AND*Dogs-are Awesome'));
 
 const in1 = 'cats AND*Dogs-are Awesome'; // input
 const r1 = 'catsAndDogsAreAwesome'; // output
