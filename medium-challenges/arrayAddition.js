@@ -4,25 +4,41 @@ const assert = require('assert');
 // numbers in the array can be added up to equal the
 // largest number in the array, otherwise return the string false
 
-function ArrayAddition(arr) {
-  const max = Math.max(null, arr);
-  const x = arr.length;
+const ArrayAddition = (arr) => {
+  const largest = [].slice.call(arr).sort((a, b) {
+    return a - b;
+  }).pop();
+  let sum = 0;
 
-  return (arr, max, x);
-
-  function sumChecker(arr, sum, length) {
-    if (sum === 0) {
+  for (let i = 0; i < arr.length; i += 1) {
+    sum += arr[i];
+    if (sum === largest) {
       return true;
     }
 
-    console.log(sumChecker);
-    if (sum === 0 && length !== 0) {
-      return false;
+    for (let j = 0; j < arr.length; j += 1) {
+      if (j !== i) {
+        sum += arr[j];
+      }
+      if (sum === largest) {
+        return true;
+      }
     }
-    return sumChecker(arr, sum, length - 1) ||
-      sumChecker(arr, sum[length - 1], length - 1);
+
+    for (let k = 0; k < arr.length; k += 1) {
+      if (k !== i) {
+        sum -= arr[k];
+      }
+      if (sum === largest) {
+        return true;
+      }
+    }
+
+    sum = 0;
   }
-}
+
+  return false;
+};
 
 const a1 = '[5,7,16,1,2]';
 const r1 = 31;
