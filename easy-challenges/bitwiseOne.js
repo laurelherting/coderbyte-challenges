@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-const BitwiseOne = strArr => {
+const BitwiseOne = (strArr) => {
   let output = '';
   for (let i = 0; i < strArr[0].length; i += 1) {
     if (strArr[0][i] === '1' || strArr[1][i] === '1') {
