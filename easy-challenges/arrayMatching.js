@@ -24,4 +24,4 @@ const t2 = ArrayMatching(a2);
 assert(t2);
 
 // console.log(t1);
-console.log(t1);
+// console.log(t1);

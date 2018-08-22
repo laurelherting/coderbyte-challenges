@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-const ArithGeo = arr => {
+const ArithGeo = (arr) => {
   const diff = arr[1] - arr[0];
   const ratio = arr[1] / arr[0];
   let allRatioAreGood = true;
