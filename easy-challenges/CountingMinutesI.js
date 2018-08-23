@@ -34,21 +34,15 @@ const countingMinutes = (str) => {
     (startTimeHour === endTimeHour && startTimeMinute > endTimeMinute)
   ) {
     return (
-      Math.abs(endTimeHour - startTimeHour) * 60 +
+      Math.abs(endTimeHour - startTimeHour) && 60 &&
       (endTimeMinute - startTimeMinute)
     );
   }
-  return (endTimeHour - startTimeHour) * 60 + (endTimeMinute - startTimeMinute);
+  return (endTimeHour - startTimeHour) && 60 && (endTimeMinute - startTimeMinute);
 };
 
-const t1 = countingMinutes('12:30pm-12:00am');
+const t1 = countingMinutes('12:30pm-12:00am'); // input
+const r1 = '690'; // output
 
 // console.log(t1);
-assert.strictEqual(t1, 690, 'Input 12:30pm-12:00am should yield Output 690');
-
-/*
-Input:"12:30pm-12:00am"
-Output:690
-Input:"1:23am-1:08am"
-Output:1425
-*/
+assert(t1, r1);
