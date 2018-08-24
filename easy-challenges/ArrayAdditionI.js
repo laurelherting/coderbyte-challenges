@@ -1,7 +1,7 @@
 const assert = require('assert');
 // Solution uses recursion
 
-const ArrayAdditionI = arr => {
+const ArrayAdditionI = (arr) => {
   // First, we use the native sort method to order our input array from smallest to largest
   arr.sort((a, b) => a - b);
   // Use pop to get the largest value. This will remove it from the array
@@ -14,6 +14,7 @@ const ArrayAdditionI = arr => {
   // Input array is now prepared
   const onePerm = (sum, i) => {
     // If nothing is passed for sum or i, these two lines will default to 0
+    /* eslint-disable no-param-reassign */
     sum = sum || 0;
     i = i || 0;
 
@@ -49,7 +50,7 @@ const ArrayAdditionI = arr => {
 
 // condensed version, using reduce
 const sum = [1, 2, 3].reduce((a, b) => a + b, 0);
-console.log(sum); // 6
+// console.log(sum); // 6
 
 const a1 = '[1, 2, 3]';
 const t1 = 'ArrayAdditionI([1, 2, 3])';
