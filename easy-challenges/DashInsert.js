@@ -1,16 +1,13 @@
 const assert = require('assert');
 
-const DashInsert = str => {
+const DashInsert = (str) => {
   const arr = str.split('');
   for (let i = 0; i < str.length - 1; i += 1) {
     if (arr[i] % 2 !== 0 && arr[i + 1] % 2 !== 0) {
       arr[i] = `${arr[i]}-`;
     }
   }
-
-  // console.log('123');
-  console.log(str);
-
+  // console.log(str);
   return arr.join('');
 };
 
