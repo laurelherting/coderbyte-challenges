@@ -10,21 +10,12 @@ const CheckNums = (num1, num2) => {
 };
 
 // console.log(3);
-const a1 = CheckNums(1, 3);
-const r1 = 'false';
+const a1 = CheckNums(1, 3); // input
+const r1 = 'false'; // output
 
 assert(r1, a1);
 
-// Test Cases
-// Input:3 & num2 = 122
-// Output:"true"
+const a2 = CheckNums('3 & num2 = 122');
+const r2 = 'true';
 
-// Input:67 & num2 = 67
-// Output:"-1"*/
-// function CheckNums(num1,num2){
-//  if (num2 > num1)
-//  return 'true';
-//  if (num1 === num2)
-//  return '-1';
-//  else
-//  return 'false' }
+assert(r2, a2);
