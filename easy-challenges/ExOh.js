@@ -22,11 +22,11 @@ const ExOh = (str) => {
 // For example: if str is "xoxxox" then the output should
 // return false because there are 4 x's and 2 o's.
 
-/* const ExOh = str => {
+/* const ExOh = (str) => {
   let o = 0,
       x = 0;
 
-  for (i=0;i<str.length;i++) {
+  for (i=0;i<str.length;i += 1) {
     if (str.toLowerCase().charAt(i) === "o") {
       o+=1;
     } else if (str.toLowerCase().charAt(i) === "x") {
@@ -41,6 +41,7 @@ const ExOh = (str) => {
   }
 };
 */
+
 console.log(ExOh('xoxxox'));
 const r1 = 'false';
 assert(r1);
