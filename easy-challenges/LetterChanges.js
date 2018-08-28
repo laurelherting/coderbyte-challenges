@@ -5,31 +5,26 @@ const assert = require('assert');
 // the alphabet(ie. c becomes d). Then, capitalize every vowel in
 // this new string and finally return modified string.
 
-const LetterChanges = str => {
+const LetterChanges = (str) => {
   const converted = str.replace(
     /[a-z]/gi,
     char =>
-      char === 'z' || char === 'Z'
+      (char === 'z' || char === 'Z'
         ? 'a'
-        : String.fromCharCode(char.charCodeAt() + 1)
+        : String.fromCharCode(char.charCodeAt() + 1)),
   );
 
   // after converting each letter to the letter following it
   // in the alphabet, we need capitalize the vowels
   const capitalized = converted.replace(/a|e|i|o|u/gi, vowel =>
-    vowel.toUpperCase()
-  );
+    vowel.toUpperCase());
 
   // return the final string
   return capitalized;
 };
 
-const a1 = 'challenge';
-const r1 = 'dibmmfohf';
-
+const a1 = 'dibmmfohf'; // input
+const r1 = 'dIbmmfOhf'; // output
 const t1 = LetterChanges(a1);
-console.log(r1);
+// console.log(r1);
 assert(t1, r1);
-const r2 = 'dIbmmfOhf';
-
-console.log(r2);
