@@ -4,7 +4,7 @@ const assert = require('assert');
 // return the factorial of it (e.g. if num = 4, return (4 * 3 * 2 * 1))
 // For the test cases, the range will be between 1 and 18 and the input will
 // always be an integer.
-const FirstFactorial = num => {
+const FirstFactorial = (num) => {
   if (num === 0) {
     return 1;
   }
