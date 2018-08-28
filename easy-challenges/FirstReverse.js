@@ -5,7 +5,7 @@ const assert = require('assert');
 // "Hello World and Coders" then your program should return the string
 // sredoC dna dlroW olleH
 
-const firstReverse = str => {
+const firstReverse = (str) => {
   const chars = str.split('');
 
   const arr = [];
