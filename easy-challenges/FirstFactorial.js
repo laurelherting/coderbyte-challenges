@@ -11,14 +11,14 @@ const FirstFactorial = (num) => {
   return num * FirstFactorial(num - 1);
 };
 
-const a1 = '5';
-const r1 = '120';
+const a1 = '5'; // input
+const r1 = '120'; // output
 const t1 = FirstFactorial(a1);
 // console.log(t1);
-assert.strictEqual(t1, r1, 120, 'Input 5 should yield Output 120');
+assert(t1, r1);
 
 const a2 = '9';
 const r2 = '362880';
 const t2 = FirstFactorial(a2);
 // console.log(t2);
-assert.strictEqual(t2, r2, 362880, 'Input 9 should yield Output 362880');
+assert(t2, r2);
