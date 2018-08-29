@@ -4,7 +4,7 @@ const assert = require('assert');
 // return 1 + the multiplicative persistence of new number
 // if there's just one number, return 0
 
-const MultiplicativePersistence = num => {
+const MultiplicativePersistence = (num) => {
   const arr = num.toString().split('');
 
   while (arr.length > 1) {
@@ -18,6 +18,9 @@ const MultiplicativePersistence = num => {
   return 0;
 };
 
-console.log(MultiplicativePersistence('8488'));
-const r1 = 'multPer';
-assert(r1);
+const a1 = '8488';
+const r1 = 3;
+const t1 = MultiplicativePersistence(a1);
+assert(r1, t1);
+
+// console.log(t1);
