@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-const letterCount = str => {
+const letterCount = (str) => {
   let letters = 0;
   const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const ar = alphabet.split('');
@@ -11,7 +11,7 @@ const letterCount = str => {
   }
   return letters;
 };
-console.log(letterCount('Howdy World!!!1'));
+// console.log(letterCount('Howdy World!!'));
 
 const a1 = 'hello';
 const r1 = '5';
