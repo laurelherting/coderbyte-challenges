@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-const OffLineMinimum = strArr => {
+const OffLineMinimum = (strArr) => {
   // store all numbers as loop through array
   const nums = [];
 
@@ -20,14 +20,16 @@ const OffLineMinimum = strArr => {
       removed.push(smallest);
     }
 
-    console.log(nums);
+    // console.log(nums);
   }
   return removed.join(',');
 };
 const a1 = '[1,2,E,E,3]'; // input
-// const r1 = '1,2'; // output
+const r1 = '1,2'; // output
 const t1 = OffLineMinimum(a1);
-assert(t1);
+assert(r1, t1);
 
-// Input:"4","E","1","E","2","E","3","E"
-// Output:"4,1,2,3"
+const a2 = ['4,E,1,E,2,E,3,E']; // input
+const r2 = '4,1,2,3'; // output
+const t2 = OffLineMinimum(a2);
+assert(r2, t2);
