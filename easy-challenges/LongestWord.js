@@ -4,7 +4,7 @@ const assert = require('assert');
 // If there are two or more words that are the same length,
 // return the first word from the string with that length.
 
-const LongestWord = sen => {
+const LongestWord = (sen) => {
   const arr = sen.match(/[a-z0-9]+/gi);
 
   const sorted = arr.sort((a, b) => b.length - a.length);
