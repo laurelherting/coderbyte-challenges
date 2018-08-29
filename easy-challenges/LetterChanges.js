@@ -1,5 +1,5 @@
 const assert = require('assert');
-// Have func LetterChanges(str) take the str parameter being
+// Have function LetterChanges(str) take the string parameter being
 // passed & modify it using this algorithm:
 // Replace every letter in string with the letter following it in
 // the alphabet(ie. c becomes d). Then, capitalize every vowel in
@@ -23,8 +23,12 @@ const LetterChanges = (str) => {
   return capitalized;
 };
 
-const a1 = 'dibmmfohf'; // input
-const r1 = 'dIbmmfOhf'; // output
+const a1 = 'challenge'; // input
+const r1 = 'dibmmfohf'; // first output
 const t1 = LetterChanges(a1);
 // console.log(r1);
 assert(t1, r1);
+
+const r2 = 'dIbmmfOhf'; // final output
+assert(r2);
+// console.log(r2);
