@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-const SecondGreatLow = arr => {
+const SecondGreatLow = (arr) => {
   // sort the unique array in ascending order
   arr.sort((a, b) => a - b);
 
@@ -10,7 +10,7 @@ const SecondGreatLow = arr => {
   return solution.join(',');
 };
 
-console.log(SecondGreatLow([2, 3, 4, 6, 8]));
+// console.log(SecondGreatLow([2, 3, 4, 6, 8]));
 
 const t1 = SecondGreatLow;
 assert(t1);
