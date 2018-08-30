@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-const powersOfTwo = n => {
+const powersOfTwo = (n) => {
   const powerArray = [];
 
   for (let i = 0; i <= n; i += 1) {
@@ -8,7 +8,7 @@ const powersOfTwo = n => {
     powerArray.push(Math ** (2, i));
   }
 
-  console.log(powerArray);
+  // console.log(powerArray);
   return [];
 };
 
