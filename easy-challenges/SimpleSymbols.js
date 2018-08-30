@@ -1,7 +1,7 @@
 const assert = require('assert');
 // catch invalid strings instead of valid ones
 
-const SimpleSymbols = str => {
+const SimpleSymbols = (str) => {
   if (str[0] >= 'a' || str[str.length - 1] >= 'a') {
     return false;
   }
@@ -33,7 +33,7 @@ const a = [
 
 const r = /^[+=\d]*\+(?:[a-z]\+[+=\d]*)+$/im;
 
-a.forEach(s => {
+a.forEach((s) => {
   console.log(r.test(s));
 });
 
