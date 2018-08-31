@@ -39,6 +39,7 @@ a.forEach((s) => {
 
 SimpleSymbols('++=+f+4=+s+'); // -> true;
 
-const r1 = 'false';
+const a1 = ('++=+f+4=+s+'); // input
+const t1 = SimpleSymbols(a1);
 
-assert(r1);
+assert(t1);
