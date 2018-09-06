@@ -2,8 +2,8 @@ const assert = require('assert');
 // Have function TimeConvert(num) take the num
 // parameter being passed and return the number of hours
 // and minutes the parameter converts to
-// (ie. if num = 63 then the output should be 1:3).
-const timeConvert = num => {
+
+const timeConvert = (num) => {
   let hours = 0;
   let minutes = 0;
 
@@ -27,9 +27,10 @@ const timeConvert = num => {
   return `${hours}:${newMinutes}`;
 };
 
-console.log(timeConvert(141));
+// console.log(timeConvert(141));
 
-// const a1 = "hours";
-const r1 = 'minutes';
+const a1 = '63'; // input
+const r1 = '1:3'; // output
+const t1 = timeConvert(a1);
 
-assert(r1);
+assert(r1, t1);
