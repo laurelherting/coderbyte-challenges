@@ -25,7 +25,10 @@ const DivisionStringified = (num1, num2) => {
   return div.join('');
 };
 
-console.log(DivisionStringified(209, 35, 2));
-const t1 = 'DivisionStringified([608, 61])';
+// console.log(DivisionStringified(209, 35, 2));
 
-assert(t1);
+const a1 = '209, 35, 2'; // input
+const r1 = '608, 61'; // output
+const t1 = DivisionStringified(a1);
+
+assert(r1, t1);
