@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-const ChangingSequence = arr => {
+const ChangingSequence = (arr) => {
   if (arr.length < 2) return -1;
   const increasing = arr[0] < arr[1];
 
