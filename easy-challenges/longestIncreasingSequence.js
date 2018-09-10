@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-const LongestIncreasingSequence = arr => {
+const LongestIncreasingSequence = (arr) => {
   const LNG = arr.length;
   let max = [];
 
