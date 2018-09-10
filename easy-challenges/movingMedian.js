@@ -1,3 +1,12 @@
+// Read the array of numbers stored in arr which contains a sliding
+// window size, N, as the first element in the array and the rest
+// will be a list of numbers.
+//
+// Return the Moving Median for each element based on the element and its
+// N-1 predecessors, where N is the sliding window size. The final output
+// should be a string with the moving median corresponding to each entry
+// in the original array separated by commas.
+
 const assert = require('assert');
 
 const MovingMedian = (arr) => {
