@@ -8,7 +8,7 @@ const assert = require('assert');
 
 const groupTotals = (strArr) => {
   const pairs = strArr.map((str) {
-    return str.split(':');
+  // return str.split(':');
   });
   const counts = {};
   for (let i = 0; i < pairs.length; i += 1) {
