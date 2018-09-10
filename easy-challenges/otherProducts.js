@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-const OtherProducts = arr => {
+const OtherProducts = (arr) => {
   let str = '';
   for (let i = 0; i < arr.length; i += 1) {
     let num = 1;
