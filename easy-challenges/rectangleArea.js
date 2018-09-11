@@ -1,6 +1,8 @@
-const assert = require('assert');
-// determine the area formed by the 4 points.
+// Determine the area formed by the 4 points.
 // The area is the width of the rectangle * the height
+
+const assert = require('assert');
+
 const RectangleArea = (strArr) => {
   const points = strArr.map(str => str.match(/\d+/g));
   const minX = points.map(point => point[0]).sort()[0];
