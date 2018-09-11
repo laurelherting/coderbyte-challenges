@@ -13,7 +13,8 @@ const OverlappingRanges = (arr) => {
 const a1 = '[1, 8, 2, 4, 4]'; // input
 const r1 = 'false'; // output
 const t1 = OverlappingRanges(a1);
-assert.strictEqual(t1, r1);
+assert(t1, r1);
+console.log(OverlappingRanges(['1, 8, 2, 4, 4']));
 
 const a2 = '[5, 11, 1, 5, 1]'; // input
 const r2 = 'true'; // output
