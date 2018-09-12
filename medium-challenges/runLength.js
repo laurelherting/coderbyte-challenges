@@ -1,6 +1,6 @@
 const assert = require('assert');
 
-const RunLength = str => {
+const RunLength = (str) => {
   let count = 1;
   let result = '';
 
@@ -15,8 +15,7 @@ const RunLength = str => {
   return result;
 };
 
-// Input='nnnnnviimmmm'
-// Output='5n1v2i4m'
-const a1 = 'nnnnnviimmmm';
-const t1 = RunLength(a1);
-assert(t1);
+const a1 = 'nnnnnviimmmm'; // input
+const r1 = '5n1v2i4m';
+const t1 = RunLength(a1); // output
+assert(t1, r1);
