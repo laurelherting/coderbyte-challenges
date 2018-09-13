@@ -16,6 +16,6 @@ const RunLength = (str) => {
 };
 
 const a1 = 'nnnnnviimmmm'; // input
-const r1 = '5n1v2i4m';
-const t1 = RunLength(a1); // output
+const r1 = '5n1v2i4m'; // output
+const t1 = RunLength(a1);
 assert(t1, r1);
