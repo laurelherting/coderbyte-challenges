@@ -1,8 +1,8 @@
 // use prime sieve to generate a list of primes
 // up to the limit
 const assert = require('assert');
-const PrimeMover = num => {
 
+const PrimeMover = (num) => {
   // negative numbers cannot be primes
   if (num < 1) { return 'invalid'; }
 
@@ -14,22 +14,20 @@ const PrimeMover = num => {
   let n = 3;
 
   // loop until the numth prime
-  while (count != num) {
-
+  while (count === num) {
     // check if n is divisible by each number in between to see if it is a prime
-    for (let i = 2; i < n; i+= 1) {
-
+    for (let i = 2; i < n; i += 1) {
       // if reach the end, this number is a prime because it was
       // not divisible by any numbers so increase the count by 1
-      if (i === n-1) {
-        count+= 1;
-        n+= 1;
+      if (i === n - 1) {
+        count += 1;
+        n += 1;
         break;
       }
       // if n is divisible by some number, then it is not a prime
       // and simply move on to the next number
       else if (n % i === 0) {
-        n+= 1;
+        n + = 1;
         break;
       }
     }
@@ -40,5 +38,5 @@ const PrimeMover = num => {
 };
 
 t1 = PrimeMover(8);
-console.log(t1);
+// console.log(t1);
 assert(t1);
