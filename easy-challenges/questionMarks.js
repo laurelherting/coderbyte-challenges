@@ -9,13 +9,19 @@ const assert = require('assert');
 const QuestionMarks = (str) => {
   let flag = false;
   for (let i = 0; i < str.length; i += 1) {
-    if( ) {
-      flag = true;
+    for (let j = i + 1; j < str.length; j += 1) {
+      if (Number(str[i]) + Number(str[j]) === 10) {
+        flag = true;
+        if (str.slice(i, j).split('?').length - 1 < 3) {
+          return false;
+        }
+      }
+    }
   }
-  // let clean = str.match(/[0-9?]/g);
-    // clean = clean.join('');
-  }
+  return flag;
 };
+
+// console.log(QuestionMarks('acc?7??sss?3rr1??????5'));
 
 const r1 = 'false'; // input
 const t1 = QuestionMarks('a??4ikb'); // output
