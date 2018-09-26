@@ -7,9 +7,14 @@
 const assert = require('assert');
 
 const QuestionMarks = (str) => {
-  let result;
-  let clean = str.match(/[0-9?]/g);
-  clean = clean.join('');
+  let flag = false;
+  for (let i = 0; i < str.length; i += 1) {
+    if( ) {
+      flag = true;
+  }
+  // let clean = str.match(/[0-9?]/g);
+    // clean = clean.join('');
+  }
 };
 
 const r1 = 'false'; // input
