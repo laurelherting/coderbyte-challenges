@@ -23,10 +23,8 @@ const PrimeMover = (num) => {
         count += 1;
         n += 1;
         break;
-      }
-      // if n is divisible by some number, then it is not a prime
-      // and simply move on to the next number
-      else if (n % i === 0) {
+      } else
+      if (n % i === 0) {
         n += 1;
         break;
       }
@@ -38,5 +36,4 @@ const PrimeMover = (num) => {
 
 const a1 = '8'; // input
 const t1 = PrimeMover(a1);
-// console.log(t1);
 assert(t1);
