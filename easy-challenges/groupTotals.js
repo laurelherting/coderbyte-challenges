@@ -7,13 +7,13 @@
 const assert = require('assert');
 
 const GroupTotals = (strArr) => {
-  let pairs = strArr.map(function(str) {
+  const pairs = strArr.map(function(str) {
     return str.split(':');
   });
   const counts = {};
   for (let i = 0; i < pairs.length; i += 1) {
     if (counts[pairs[i]]) {
-      counts[pairs[i][0]] += parseInt(pairs[i][1]);
+      counts[pairs[i][0]] += 1 parseInt(pairs[i][1]);
     }
   }
   const returnArr = [];
