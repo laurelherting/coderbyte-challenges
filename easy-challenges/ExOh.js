@@ -1,6 +1,5 @@
 const assert = require('assert');
 
-// step by step
 const ExOh = (str) => {
   // declare two variables
   // One removes all characters in str that aren't x's
