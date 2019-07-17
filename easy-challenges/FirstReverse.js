@@ -27,7 +27,7 @@ const r1 = 'egnellahc';
 const t1 = firstReverse(a1);
 assert.strictEqual(t1, r1, `should be ${r1}`);
 
-const a2 = 'I Love Code';
-const r2 = 'edoC evoL I';
+const a2 = 'I Love To Code';
+const r2 = 'edoC oT evoL I';
 const t2 = firstReverse(a2);
 assert.strictEqual(t2, r2, `should be ${r2}`);
