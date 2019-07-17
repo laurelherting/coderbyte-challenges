@@ -7,8 +7,10 @@ const assert = require('assert');
 const SimpleAdding = (num) => {
   let addedNum = num;
   for (let i = 1; i <= num; i += 1) {
+    // ...adding i to answer each time
     addedNum += i;
   }
+  // return answer
   return addedNum;
 };
 
