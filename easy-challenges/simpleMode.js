@@ -3,9 +3,8 @@ const assert = require('assert');
 
 const SimpleMode = (arr) => {
   const table = {};
-  for (var i = 0; i < arr.length; i+= 1) {
-    let number = arr[i];
-
+  for (let i = 0; i < arr.length; i += 1) {
+    const number = arr[i];
   }
 };
 
