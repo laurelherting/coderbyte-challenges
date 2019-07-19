@@ -1,3 +1,8 @@
+/* objective:
+Alphabetically sort the characters in a string.
+Then, sort the characters using the built-in array sort function. */
+
+// solution:
 const assert = require('assert');
 
 const AlphabetSoup = (str) => {
