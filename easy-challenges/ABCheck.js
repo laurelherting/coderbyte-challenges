@@ -6,9 +6,8 @@ anywhere in string */
 const assert = require('assert');
 
 const ABCheck = (str) => {
-  // First, declare a regex expression to match if a and b ever occur three characters apart
+  // First, declare regex expression to match if a & b ever occur three characters apart
   // . is a "wildcard" metacharacter in regex that matches almost any character
-
   const ab = /[a]...b/.test(str);
 
   // return answer
