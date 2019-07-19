@@ -27,3 +27,19 @@ const r2 = 'oohhsw'; // output
 const t2 = AlphabetSoup(a2);
 assert(t2, r2);
 // console.log(r2);
+
+
+// With Chaining
+/*
+const assert = require('assert');
+
+function AlphabetSoup (str) {
+  return str.split('').sort().join('');
+}
+
+const a2 = 'whoosh';
+const r2 = 'oohhsw'; // output
+const t2 = AlphabetSoup(a2);
+assert(t2, r2);
+// console.log(r2);
+*/
