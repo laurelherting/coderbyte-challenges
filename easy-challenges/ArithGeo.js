@@ -12,11 +12,15 @@ const ArithGeo = (arr) => {
   let allRatioAreGood = true;
   let allDiffAreGood = true;
 
+  // loop through each item inside array and use the .push method to send
   for (let i = 2; i < arr.length; i += 1) {
+  // the difference of each item to good array
     allRatioAreGood += arr[i] / arr[i - 1] === ratio;
     allDiffAreGood += arr[i] - arr[i - 1] === diff;
   }
 
+  // Finally, return "Geometric" if the ariFlag is set to false,
+  // "arithmetic" if the geoFlag is set to false, and -1 if neither are set to false
   if (allRatioAreGood) return 'Geometric';
   if (allDiffAreGood) return 'Arithmetic';
   return -1;
