@@ -2,7 +2,7 @@ const assert = require('assert');
 // Solution uses recursion
 
 const ArrayAdditionI = (arr) => {
-  // First, we use the native sort method to order our input array from smallest to largest
+  // First, use the native sort method to order input array from smallest to largest
   arr.sort((a, b) => a - b);
   // Use pop to get the largest value. This will remove it from the array
   const largest = arr.pop();
@@ -26,7 +26,7 @@ const ArrayAdditionI = (arr) => {
     }
 
     // Now, we see that the current sum isn't equal to the largest value,
-    // so we iterate over the numbers array
+    // so iterate over the numbers array
     for (; i < arr.length; i += 1) {
       // Add the current number to sum
       sum += arr[i];
@@ -47,9 +47,8 @@ const ArrayAdditionI = (arr) => {
   onePerm();
   return result;
 };
-
 // condensed version, using reduce
-const sum = [1, 2, 3].reduce((a, b) => a + b, 0);
+// const sum = [1, 2, 3].reduce((a, b) => a + b, 0);
 // console.log(sum); // 6
 
 const a1 = '[1, 2, 3]';
