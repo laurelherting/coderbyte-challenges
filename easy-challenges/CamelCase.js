@@ -1,4 +1,5 @@
-// objective: convert dash/underscore delimited words into camel casing
+// objective:
+// convert dash/underscore delimited words into camel casing
 // note: The first word within the output should be capitalized only if the
 // original word was capitalized
 
