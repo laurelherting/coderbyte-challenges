@@ -1,3 +1,9 @@
+// objective: take the str parameter being passed which will be two times,
+// (each properly formatted with a colon and am or pm) separated by a hyphen,
+// return total number of minutes between the two times.
+// The time will be in a 12 hour clock format
+
+// solution:
 const assert = require('assert');
 
 const countingMinutes = (str) => {
