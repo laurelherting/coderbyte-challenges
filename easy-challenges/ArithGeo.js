@@ -1,3 +1,9 @@
+// objective:
+// take the array of numbers stored in arr and return the string "Arithmetic"
+// if the sequence follows an arithmetic pattern
+// return "Geometric" if it follows a geometric pattern
+
+// solution:
 const assert = require('assert');
 
 const ArithGeo = (arr) => {
