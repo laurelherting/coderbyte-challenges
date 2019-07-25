@@ -47,6 +47,6 @@ const ExOh = (str) => {
 };
 */
 
-console.log(ExOh('xoxxox'));
+// console.log(ExOh('xoxxox'));
 const r1 = 'false';
 assert(r1);
