@@ -1,9 +1,11 @@
-const assert = require('assert');
-
+// objective:
 // Have the function FirstReverse(str) take the str parameter being passed and
-// return the string in reversed order. For example: if the input string is
-// "Hello World and Coders" then your program should return the string
-// sredoC dna dlroW olleH
+// return the string in reversed order.
+// example: if input string is "Hello World and Coders", then your program should
+// return the string "sredoC dna dlroW olleH"
+
+// solution:
+const assert = require('assert');
 
 const firstReverse = (str) => {
   const chars = str.split('');
@@ -20,7 +22,11 @@ const firstReverse = (str) => {
   return revStr;
 };
 
-// Console.log('coderbyte');
+/* Using chaining
+function FirstReverse (str) {
+  return str.split('').reverse().join('');
+}
+*/
 
 const a1 = 'challenge';
 const r1 = 'egnellahc';
