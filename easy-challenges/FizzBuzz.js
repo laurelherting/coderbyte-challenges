@@ -1,7 +1,7 @@
-const assert = require('assert');
+// objective:
 // Print out all the numbers from 1 to 100. For every
 // number divisible by 3 print replace it with the word "Fizz",
-// for any number divisible by 5 replace it with the word "Buzz"
+// for any number divisible by 5 replace it with the word "Buzz",
 // and for a number divisible by both 3 and 5, replace it with
 // the word "FizzBuzz".
 // So, your program should output:
@@ -13,6 +13,9 @@ const assert = require('assert');
 // Fizz
 // 7
 // .
+
+// solution:
+const assert = require('assert');
 
 const fizzBuzz = () => {
   for (let i = 1; i <= 100; i += 1) {
