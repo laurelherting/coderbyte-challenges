@@ -1,8 +1,9 @@
+// objective:
+// take the str parameter being passed and capitalize the first letter
+// of each word. Words will be separated by only one space.
+
+// solution:
 const assert = require('assert');
-/* Using the JavaScript language, have the function
- * LetterCapitalize(str) take the str parameter being
- * passed and capitalize the first letter
- * of each word. Words will be separated by only one space. */
 
 const letterCapitalize = (str) => {
   const arr = str.split('');
