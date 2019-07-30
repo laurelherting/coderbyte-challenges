@@ -1,6 +1,5 @@
 // objective:
-// Take the string parameter being
-// passed & modify it using this algorithm:
+// Take the string parameter being passed & modify it using this algorithm:
 // Replace every letter in string with the letter following it in
 // the alphabet(ie. c becomes d). Then, capitalize every vowel in
 // this new string and finally return modified string.
@@ -18,7 +17,7 @@ const LetterChanges = (str) => {
   );
 
   // after converting each letter to the letter following it
-  // in the alphabet, we need capitalize the vowels
+  // in the alphabet, next capitalize the vowels
   const capitalized = converted.replace(/a|e|i|o|u/gi, vowel =>
     vowel.toUpperCase());
 
