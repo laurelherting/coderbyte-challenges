@@ -1,8 +1,11 @@
-const assert = require('assert');
+// objective:
 // Have the function LongestWord(sen) take the sen parameter being passed
 // and return the largest word in the string.
 // If there are two or more words that are the same length,
 // return the first word from the string with that length.
+
+// solution:
+const assert = require('assert');
 
 const LongestWord = (sen) => {
   const arr = sen.match(/[a-z0-9]+/gi);
