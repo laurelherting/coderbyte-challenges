@@ -1,8 +1,10 @@
-const assert = require('assert');
-
+// objective:
 // Multiply numbers in num, if more than one number
 // return 1 + the multiplicative persistence of new number
 // if there's just one number, return 0
+
+// solution:
+const assert = require('assert');
 
 const MultiplicativePersistence = (num) => {
   const arr = num.toString().split('');
