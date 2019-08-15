@@ -1,6 +1,5 @@
-/* objective:
-Determine if characters "a" & "b" are separated by exactly 3 places
-anywhere in string */
+// objective:
+// Determine if characters "a"&"b" are separated by exactly 3 places in string
 
 // solution:
 const assert = require('assert');
