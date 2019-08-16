@@ -1,7 +1,7 @@
-/* objective:
-Continually add up all the numbers in the parameter until
-you reach a single number. When you reach a single number,
-return how many times you had to add to reach it. */
+// objective:
+// Continually add up all the numbers in the parameter until
+// you reach a single number. When you reach a single number,
+// return how many times you had to add to reach it.
 
 // solution:
 const assert = require('assert');
