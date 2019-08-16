@@ -3,8 +3,6 @@
 //  string and return an array of all matches found
 //  (set to 0 if none are found)
 //  Use the reduce function in the array to return a single value.
-// Input:"75Number9"
-// Output:84
 
 // solution:
 const assert = require("assert");
