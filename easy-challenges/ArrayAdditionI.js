@@ -1,4 +1,7 @@
 // objective:
+// Take the array of numbers stored in arr and return the string true if any
+// combination of numbers in the array can be added up to equal the largest number
+// in the array, otherwise return the string false
 
 // solution (using recursion):
 const assert = require("assert");
