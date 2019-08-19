@@ -1,7 +1,9 @@
-const assert = require('assert');
-// Solution uses recursion
+// objective:
 
-const ArrayAdditionI = (arr) => {
+// solution (using recursion):
+const assert = require("assert");
+
+const ArrayAdditionI = arr => {
   // First, use the native sort method to order input array from smallest to largest
   arr.sort((a, b) => a - b);
   // Use pop to get the largest value. This will remove it from the array
@@ -51,7 +53,7 @@ const ArrayAdditionI = (arr) => {
 // const sum = [1, 2, 3].reduce((a, b) => a + b, 0);
 // console.log(sum); // 6
 
-const a1 = '[1, 2, 3]';
-const t1 = 'ArrayAdditionI([1, 2, 3])';
+const a1 = "[1, 2, 3]";
+const t1 = "ArrayAdditionI([1, 2, 3])";
 
 assert(t1, a1);
