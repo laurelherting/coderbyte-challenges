@@ -20,8 +20,8 @@ const Palindrome = str => {
   return false;
 };
 
-// console.log('Pendulum');
 const a1 = "A weight, suspended from pivot. It can swing freely.";
 const r1 = "false";
 const t1 = Palindrome(a1);
+console.log(r1);
 assert(r1, t1);
