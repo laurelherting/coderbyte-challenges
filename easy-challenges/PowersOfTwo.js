@@ -1,3 +1,8 @@
+// objective:
+// Take the num parameter being passed which will be an integer
+// and return the string true if it's a power of two. If it's not return the string false.
+
+// solution:
 const assert = require('assert');
 
 const powersOfTwo = (n) => {
