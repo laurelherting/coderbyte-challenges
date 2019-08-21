@@ -1,13 +1,18 @@
-const assert = require('assert');
+// objective:
+// Take the array of numbers stored in arr and return the second lowest
+// and second greatest numbers, respectively, separated by a space.
 
-const SecondGreatLow = (arr) => {
+// solution:
+const assert = require("assert");
+
+const SecondGreatLow = arr => {
   // sort the unique array in ascending order
   arr.sort((a, b) => a - b);
 
   // return the second smallest and largest elements
   const solution = [];
   solution.push(arr[1], arr[arr.length - 2]);
-  return solution.join(',');
+  return solution.join(",");
 };
 
 // console.log(SecondGreatLow([2, 3, 4, 6, 8]));
