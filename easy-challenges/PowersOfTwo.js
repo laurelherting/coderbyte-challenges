@@ -3,9 +3,9 @@
 // and return the string true if it's a power of two. If it's not return the string false.
 
 // solution:
-const assert = require('assert');
+const assert = require("assert");
 
-const powersOfTwo = (n) => {
+const powersOfTwo = n => {
   const powerArray = [];
 
   for (let i = 0; i <= n; i += 1) {
@@ -20,6 +20,6 @@ const powersOfTwo = (n) => {
 powersOfTwo(0);
 powersOfTwo(6);
 powersOfTwo(8);
-const r1 = '[]';
+const r1 = "[]";
 
 assert(r1);
