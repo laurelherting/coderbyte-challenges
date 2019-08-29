@@ -1,5 +1,8 @@
-const assert = require('assert');
+// objective:
 // catch invalid strings instead of valid ones
+
+// solution:
+const assert = require('assert');
 
 const SimpleSymbols = (str) => {
   if (str[0] >= 'a' || str[str.length - 1] >= 'a') {
