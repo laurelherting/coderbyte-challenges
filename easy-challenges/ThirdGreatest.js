@@ -1,6 +1,10 @@
-const assert = require('assert');
+// objective:
+// Take the array of strings stored in strArr and return the third largest word within
 
-const ThirdGreatest = (strArr) => {
+// solution:
+const assert = require("assert");
+
+const ThirdGreatest = strArr => {
   strArr.sort((a, b) => b.length - a.length);
   return strArr[2];
 };
