@@ -1,6 +1,5 @@
 // objective:
-// Take the num parameter being passed which will be an integer and return the
-// string true if it's a power of two. If it's not return the string false.
+// Convert a binary number into a decimal number
 
 // solution:
 const assert = require("assert");
