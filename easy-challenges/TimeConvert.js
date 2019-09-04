@@ -1,7 +1,10 @@
-const assert = require('assert');
+// objective:
 // Have function TimeConvert(num) take the num
 // parameter being passed and return the number of hours
 // and minutes the parameter converts to
+
+// solution:
+const assert = require('assert');
 
 const timeConvert = (num) => {
   let hours = 0;
