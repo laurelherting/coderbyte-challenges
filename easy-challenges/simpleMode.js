@@ -10,5 +10,8 @@ function SimpleMode(bstr) {
 
 // console.log(SimpleMode("11001")); yields: 25
 
-const r1 = "5";
-assert(r1);
+const a1 = "11001"; // input
+const r1 = "25"; // output
+const t1 = SimpleMode(a1);
+
+// console.log(r1);
