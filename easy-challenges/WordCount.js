@@ -17,5 +17,5 @@ const WordCount = str => {
 
 const a1 = "React is awesome"; // input
 const t1 = WordCount(a1);
-// console.log(r1);
+// console.log(t1);
 assert(t1, a1);
