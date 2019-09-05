@@ -1,7 +1,10 @@
-const assert = require('assert');
-
+// objective:
 // sort the array, then rearrange elements into a pattern-
 // pick elements from separate sides of array
+
+// solution:
+const assert = require('assert');
+
 const WaveSorting = arr => {
   const count = {};
   for (let i = 0; i < arr.length; i += 1) {
