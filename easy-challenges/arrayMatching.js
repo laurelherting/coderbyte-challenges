@@ -1,8 +1,8 @@
 // objective:
-// This challenge can be solved by creating a new
-// array, then looping through one of the arrays and
-// adding each element with the corresponding element
-// in the other array, and storing this sum in the new array.
+// Solve by creating a new
+// array, then loop through one of the arrays and
+// add each element with the corresponding element
+// in the other array, then stor this sum in the new array.
 
 // solution:
 const assert = require('assert');
