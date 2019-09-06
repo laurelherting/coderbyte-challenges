@@ -1,7 +1,6 @@
 // objective:
-// Solve by creating a new
-// array, then loop through one of the arrays and
-// add each element with the corresponding element
+// Solve by creating a new array, then loop through one of the
+// arrays and add each element with the corresponding element
 // in the other array, then stor this sum in the new array.
 
 // solution:
