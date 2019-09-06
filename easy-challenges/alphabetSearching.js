@@ -1,8 +1,10 @@
-const assert = require("assert");
-
+// objective:
 // Take the string parameter being passed and return the string
 // true if every letter from alphabet exists in the string.
 // Or else, return false.
+
+// solution:
+const assert = require("assert");
 
 const alphabetSearching = str => {
   const array = str.split("");
