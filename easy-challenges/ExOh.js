@@ -4,15 +4,15 @@
 // Only these two letters will be entered in the string, no punctuation or numbers
 
 // solution:
-const assert = require('assert');
+const assert = require("assert");
 
-const ExOh = (str) => {
+const ExOh = str => {
   // declare two variables
   // One removes all characters in str that aren't x's
-  const strX = str.replace(/[^x]/g, '');
+  const strX = str.replace(/[^x]/g, "");
 
   // second variable removes all characters that aren't 0's
-  const strO = str.replace(/[^o]/g, '');
+  const strO = str.replace(/[^o]/g, "");
 
   // find length of variables to find amount of x's and o's are in str
   const xNumber = strX.length;
@@ -48,5 +48,5 @@ const ExOh = (str) => {
 */
 
 // console.log(ExOh('xoxxox'));
-const r1 = 'false';
+const r1 = "false";
 assert(r1);
