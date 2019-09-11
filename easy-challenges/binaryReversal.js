@@ -23,6 +23,9 @@ const BinaryReversal = str => {
   );
 };
 
-const t1 = BinaryReversal(213); // input
-// console.log(t1);
-assert.strictEqual(t1, 171, "Input 213 should yield Output 171");
+const a1 = "13"; // input
+const r1 = "11"; // output
+const t1 = BinaryReversal(a1);
+
+console.log(t1);
+assert(r1, t1);
