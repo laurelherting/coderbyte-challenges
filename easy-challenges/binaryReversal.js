@@ -6,26 +6,19 @@
 // solution:
 const assert = require("assert");
 
-const BinaryReversal = str => {
-  let num = Number(str).toString(2);
+function BinaryReversal(n) {
+  let r = 0;
 
-  // add leading zeroes to make the number an integral number
-  while (num.length % 8) {
-    num = `0${num}`;
-  }
+  do {
+    r = (r << 1) + (n & 1);
+  } while ((n = n >> 1));
 
-  return parseInt(
-    num
-      .split("")
-      .reverse()
-      .join(""),
-    2
-  );
-};
+  return r;
+}
 
 const a1 = "13"; // input
 const r1 = "11"; // output
 const t1 = BinaryReversal(a1);
 
-console.log(t1);
+// console.log(t1);
 assert(r1, t1);
