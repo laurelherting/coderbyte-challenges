@@ -1,12 +1,13 @@
-// Read in strArr parameter containing key:value
-// pairs where the key is a string and the value
-// is an integer
-// This should return a string with new key:value pairs
-// separated by a comma so that each key appears just
-// once with the total values summed up
+// objective:
+// Read in strArr parameter containing key:value pairs where the key
+// is a string and the value is an integer. This should return a string
+// with new key:value pairs separated by a comma so that each key appears
+// just once with the total values summed up.
+
+// solution:
 const assert = require('assert');
 
-const GroupTotals = (strArr) => {
+function GroupTotals (strArr) {
   const pairs = strArr.map(function(str) {
     return str.split(':');
   });
@@ -24,7 +25,7 @@ const GroupTotals = (strArr) => {
   }
 
   return returnArr.sort().join(',');
-};
+}
 
 const a1 = '["Z:0", "A:-1"]'; // input
 const r1 = 'A:-1';
