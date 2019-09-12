@@ -5,11 +5,11 @@
 // just once with the total values summed up.
 
 // solution:
-const assert = require('assert');
+const assert = require("assert");
 
-function GroupTotals (strArr) {
+function GroupTotals(strArr) {
   const pairs = strArr.map(function(str) {
-    return str.split(':');
+    return str.split(":");
   });
   const counts = {};
   for (let i = 0; i < pairs.length; i += 1) {
@@ -24,11 +24,11 @@ function GroupTotals (strArr) {
     }
   }
 
-  return returnArr.sort().join(',');
+  return returnArr.sort().join(",");
 }
 
 const a1 = '["Z:0", "A:-1"]'; // input
-const r1 = 'A:-1';
+const r1 = "A:-1";
 // Above output should return the keys in
 // alphabetical order, but exclude keys that have a value
 // of 0 after being summed up
@@ -36,6 +36,6 @@ const t1 = GroupTotals(a1);
 assert(r1, t1);
 
 const a2 = '["X:-1", "Y:1", "X:-4", "B:3", "X:5"]'; // input
-const r2 = 'B:3,Y:1'; // output
+const r2 = "B:3,Y:1"; // output
 const t2 = GroupTotals(a2);
 assert(r2, t2);
