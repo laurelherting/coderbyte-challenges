@@ -10,7 +10,7 @@ const assert = require("assert");
 
 function ChangingSequence(arr) {
   if (arr.length < 2) return -1;
-  const increasing = arr[0] < arr[1];
+  let increasing = arr[0] < arr[1];
 
   for (let i = 1; i < arr.length - 1; i += 1) {
     if (increasing) {
