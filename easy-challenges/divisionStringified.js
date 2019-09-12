@@ -1,11 +1,17 @@
-const assert = require('assert');
+//objective:
+// Take both parameters being passed, divide num1 by num2, and return the result as
+// a string with properly formatted commas. If an answer is only 3 digits long,
+// return the number with no commas (ie. 2 / 3 should output "1").
 
-const DivisionStringified = (num1, num2) => {
+//solution:
+const assert = require("assert");
+
+function DivisionStringified(num1, num2) {
   // Divide, then round accordingly
   let div = Math.round(num1 / num2);
 
   // use the .split method to convert into an array
-  div = div.toString().split('');
+  div = div.toString().split("");
 
   let insert = 0;
 
@@ -22,13 +28,13 @@ const DivisionStringified = (num1, num2) => {
   }
 
   // return string
-  return div.join('');
-};
+  return div.join("");
+}
 
 // console.log(DivisionStringified(209, 35, 2));
 
-const a1 = '209, 35, 2'; // input
-const r1 = '608, 61'; // output
+const a1 = "209, 35, 2"; // input
+const r1 = "608, 61"; // output
 const t1 = DivisionStringified(a1);
 
 assert(r1, t1);
