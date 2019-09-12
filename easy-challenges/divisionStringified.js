@@ -1,4 +1,4 @@
-//objective:
+// objective:
 // Take both parameters being passed, divide num1 by num2, and return the result as
 // a string with properly formatted commas. If an answer is only 3 digits long,
 // return the number with no commas (ie. 2 / 3 should output "1").
