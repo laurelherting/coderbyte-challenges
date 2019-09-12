@@ -1,6 +1,14 @@
-const assert = require('assert');
+// objective:
+// Determine at what index in an array the sequence changes from increasing
+// to decreasing or vice versa. For example, if the array were [1, 2, 4, 6, 4, 3, 1]
+// then your program should return 3 because at index 3 the sequence begins to change
+// from increasing to decreasing. If there is no change in sequence,
+// then your program should return -1.
 
-const ChangingSequence = (arr) => {
+// solution:
+const assert = require("assert");
+
+const ChangingSequence = arr => {
   if (arr.length < 2) return -1;
   const increasing = arr[0] < arr[1];
 
