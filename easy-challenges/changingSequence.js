@@ -8,7 +8,7 @@
 // solution:
 const assert = require("assert");
 
-function ChangingSequence (arr) {
+function ChangingSequence(arr) {
   if (arr.length < 2) return -1;
   const increasing = arr[0] < arr[1];
 
@@ -21,5 +21,8 @@ function ChangingSequence (arr) {
   return -1;
 }
 
-const t1 = ChangingSequence;
-assert(t1);
+const a1 = "[1, 2, 4, 6, 4, 3, 1]";
+const t1 = "ChangingSequence([3])";
+
+// console.log(t1);
+assert(a1, t1);
