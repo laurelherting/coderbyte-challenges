@@ -28,7 +28,7 @@ function GroupTotals(strArr) {
 }
 
 const a1 = '["Z:0", "A:-1"]'; // input
-const r1 = "A:-1";
+const r1 = "A:-1"; // output
 // Above output should return the keys in
 // alphabetical order, but exclude keys that have a value
 // of 0 after being summed up
