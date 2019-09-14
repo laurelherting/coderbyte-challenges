@@ -1,3 +1,7 @@
+// objective:
+// 
+
+// solution:
 const assert = require('assert');
 
 const LongestIncreasingSequence = (arr) => {
