@@ -22,8 +22,8 @@ const WaveSorting = arr => {
     return Math.max(...newArr) > arr.length/2 ? false : true;
 };
 
-console.log(WaveSorting([0, 4, 22, 4, 14, 4, 2])); // true
-console.log(WaveSorting([0, 1, 2, 4, 1, 1, 1])); // false
+// console.log(WaveSorting([0, 4, 22, 4, 14, 4, 2])); // true
+// console.log(WaveSorting([0, 1, 2, 4, 1, 1, 1])); // false
 
 const a1 = '[0, 1, 2, 4, 1, 4]'; // input
 const r1 = 'true'; // output
