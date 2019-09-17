@@ -1,9 +1,13 @@
 // objective:
+// Given an array with 5 numbers. The first 2 numbers represent a range,
+// and the next two numbers represent another range. The final number in
+// the array is X. The goal of your program is to determine if both ranges
+// overlap by at least X numbers
 
 // solution:
 const assert = require("assert");
 
-const OverlappingRanges = arr => {
+function OverlappingRanges(arr) {
   let counter = 0;
   for (let i = arr[0]; i < arr[1]; i += 1) {
     if (i >= arr[2] && i <= arr[3]) {
@@ -11,7 +15,7 @@ const OverlappingRanges = arr => {
     }
   }
   return counter >= arr[4];
-};
+}
 
 const a1 = "[1, 8, 2, 4, 4]"; // input
 const r1 = "false"; // output
