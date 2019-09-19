@@ -1,7 +1,11 @@
-const assert = require('assert');
+// objective:
+// Return the product of a set of elements in an array.
 
-const OtherProducts = (arr) => {
-  let str = '';
+// solution:
+const assert = require("assert");
+
+function OtherProducts(arr) {
+  let str = "";
   for (let i = 0; i < arr.length; i += 1) {
     let num = 1;
     for (let j = 0; j < arr.length; j += 1) {
@@ -11,13 +15,13 @@ const OtherProducts = (arr) => {
     }
     str += num;
     if (i !== arr.length - 1) {
-      str += '-';
+      str += "-";
     }
   }
   return str;
-};
+}
 
-const in1 = '1, 2, 3, 100'; // input
-const expect1 = '600-300-200-6'; // output
+const in1 = "1, 2, 3, 100"; // input
+const expect1 = "600-300-200-6"; // output
 const test1 = OtherProducts(in1);
 assert(test1, expect1);
