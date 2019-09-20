@@ -4,13 +4,13 @@
 // return how many times you had to add to reach it.
 
 // solution:
-const assert = require('assert');
+const assert = require("assert");
 
-const AdditivePersistence = (num) => {
+function AdditivePersistence(num) {
   // Add numbers in num, if more than one number
   // return 1 + the additive persistence of new number
   // if there's just one number, return 0
-  const arr = num.toString().split('');
+  const arr = num.toString().split("");
 
   while (arr.length > 1) {
     let added = 0;
@@ -21,8 +21,8 @@ const AdditivePersistence = (num) => {
   }
 
   return 0;
-};
+}
 
 // console.log(AdditivePersistence('3891'));
-const r1 = 'addPer';
+const r1 = "addPer";
 assert(r1);
