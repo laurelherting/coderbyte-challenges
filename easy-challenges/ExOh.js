@@ -6,7 +6,7 @@
 // solution:
 const assert = require("assert");
 
-const ExOh = str => {
+function ExOh(str) {
   // declare two variables
   // One removes all characters in str that aren't x's
   const strX = str.replace(/[^x]/g, "");
@@ -20,7 +20,7 @@ const ExOh = str => {
 
   // return truth value of comparison of both
   return xNumber === oNumber;
-};
+}
 
 // Best Practice with example
 // Only these two letters(x,o) will be entered in the string, no punctuation or numbers
