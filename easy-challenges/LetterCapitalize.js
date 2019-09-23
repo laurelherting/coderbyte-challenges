@@ -3,18 +3,18 @@
 // of each word. Words will be separated by only one space.
 
 // solution:
-const assert = require('assert');
+const assert = require("assert");
 
-const letterCapitalize = (str) => {
-  const arr = str.split('');
+function letterCapitalize(str) {
+  const arr = str.split("");
   for (let i = 0; i < arr.length; i += 1) {
     arr[i] = arr[i].substring(0, 1).toUpperCase() + arr[i].substring(1);
   }
-  return arr.join('');
-};
+  return arr.join("");
+}
 
-const in1 = 'i like coffee'; // input
-const expect1 = 'I Like Coffee'; // output
+const in1 = "i like coffee"; // input
+const expect1 = "I Like Coffee"; // output
 const test1 = letterCapitalize(in1);
 assert(test1, expect1);
 
