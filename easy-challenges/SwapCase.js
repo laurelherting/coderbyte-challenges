@@ -10,7 +10,7 @@
 
 const assert = require("assert");
 
-const swapCase = str => {
+function swapCase(str) {
   const chars = str.split("");
 
   for (let i = 0; i < chars.length; i += 1) {
@@ -24,7 +24,7 @@ const swapCase = str => {
   const caseStr = chars.join("");
   // console.log(caseStr);
   return caseStr;
-};
+}
 
 const in1 = "Hello-World"; // input
 const expect1 = "hELLO-wORLD"; // output
