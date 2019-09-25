@@ -6,9 +6,9 @@
 // will only contain positive integers, and will not contain more than one mode.
 
 // solution:
-const assert = require('assert');
+const assert = require("assert");
 
-const meanMode = (arr) => {
+function meanMode(arr) {
   const modeMap = {};
   let mode = 0;
   let modeCount = 0;
@@ -34,9 +34,9 @@ const meanMode = (arr) => {
     return 1;
   }
   return 0;
-};
+}
 
-const a1 = '[1, 2, 3]'; // input
+const a1 = "[1, 2, 3]"; // input
 const r1 = 0; // output
 const t1 = meanMode(a1);
 assert.strictEqual(t1, r1);

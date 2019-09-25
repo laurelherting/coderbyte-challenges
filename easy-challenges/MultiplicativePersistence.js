@@ -4,10 +4,10 @@
 // if there's just one number, return 0
 
 // solution:
-const assert = require('assert');
+const assert = require("assert");
 
-const MultiplicativePersistence = (num) => {
-  const arr = num.toString().split('');
+function MultiplicativePersistence(num) {
+  const arr = num.toString().split("");
 
   while (arr.length > 1) {
     let mult = 1;
@@ -18,9 +18,9 @@ const MultiplicativePersistence = (num) => {
   }
 
   return 0;
-};
+}
 
-const a1 = '8488';
+const a1 = "8488";
 const r1 = 3;
 const t1 = MultiplicativePersistence(a1);
 assert(r1, t1);
