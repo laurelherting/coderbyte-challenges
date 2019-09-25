@@ -6,7 +6,7 @@
 // solution (using recursion):
 const assert = require("assert");
 
-const ArrayAdditionI = arr => {
+function ArrayAdditionI(arr) {
   // First, use the native sort method to order input array from smallest to largest
   arr.sort((a, b) => a - b);
   // Use pop to get the largest value. This will remove it from the array
@@ -51,7 +51,7 @@ const ArrayAdditionI = arr => {
   // Check variations, but don't have to pass anything in
   onePerm();
   return result;
-};
+}
 // condensed version, using reduce
 // const sum = [1, 2, 3].reduce((a, b) => a + b, 0);
 // console.log(sum); // 6

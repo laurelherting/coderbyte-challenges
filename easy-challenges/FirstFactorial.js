@@ -5,23 +5,23 @@
 // always be an integer.
 
 // solution:
-const assert = require('assert');
+const assert = require("assert");
 
-const FirstFactorial = (num) => {
+function FirstFactorial(num) {
   if (num === 0) {
     return 1;
   }
   return num * FirstFactorial(num - 1);
-};
+}
 
-const a1 = '5'; // input
-const r1 = '120'; // output
+const a1 = "5"; // input
+const r1 = "120"; // output
 const t1 = FirstFactorial(a1);
 // console.log(t1);
 assert(t1, r1);
 
-const a2 = '9';
-const r2 = '362880';
+const a2 = "9";
+const r2 = "362880";
 const t2 = FirstFactorial(a2);
 // console.log(t2);
 assert(t2, r2);

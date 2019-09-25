@@ -5,19 +5,19 @@
 // return the first word from the string with that length.
 
 // solution:
-const assert = require('assert');
+const assert = require("assert");
 
-const LongestWord = (sen) => {
+function LongestWord(sen) {
   const arr = sen.match(/[a-z0-9]+/gi);
 
   const sorted = arr.sort((a, b) => b.length - a.length);
 
   return sorted[0];
-};
+}
 
-const a1 = 'This is a hedgehog';
+const a1 = "This is a hedgehog";
 // console.log('a1');
-const r1 = 'hedgehog';
+const r1 = "hedgehog";
 // console.log('r1');
 const t1 = LongestWord(a1);
 // console.log(t1);

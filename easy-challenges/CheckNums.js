@@ -5,20 +5,20 @@
 // If the parameter values are equal to each other, return the string -1
 
 // solution:
-const assert = require('assert');
+const assert = require("assert");
 
-const CheckNums = (num1, num2) => {
-  if (num1 === num2) return '-1';
+function CheckNums(num1, num2) {
+  if (num1 === num2) return "-1";
   return (num2 > num1).toString();
-};
+}
 
 // console.log(3);
 const a1 = CheckNums(1, 3); // input
-const r1 = 'false'; // output
+const r1 = "false"; // output
 
 assert(r1, a1);
 
-const a2 = CheckNums('3 & num2 = 122');
-const r2 = 'true';
+const a2 = CheckNums("3 & num2 = 122");
+const r2 = "true";
 
 assert(r2, a2);
