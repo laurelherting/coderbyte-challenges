@@ -7,7 +7,7 @@
 // solution:
 const assert = require("assert");
 
-const NumberAddition = str => {
+function NumberAddition(str) {
   const pattern = /\d*/g;
   const numbers = str.match(pattern);
   let number = 0;
@@ -18,7 +18,7 @@ const NumberAddition = str => {
     }
   }
   return number;
-};
+}
 // console.log(NumberAddition('75Number9'));
 
 const in1 = "75Number9"; // input

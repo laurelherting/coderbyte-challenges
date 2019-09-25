@@ -10,7 +10,7 @@
 // solution:
 const assert = require("assert");
 
-const OffLineMinimum = strArr => {
+function OffLineMinimum (strArr) {
   // store all numbers as loop through array
   const nums = [];
 
