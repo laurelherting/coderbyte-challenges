@@ -9,7 +9,7 @@
 // solution:
 const assert = require("assert");
 
-const SimpleSymbols = str => {
+function SimpleSymbols(str) {
   if (str[0] >= "a" || str[str.length - 1] >= "a") {
     return false;
   }
@@ -22,7 +22,7 @@ const SimpleSymbols = str => {
   }
 
   return true;
-};
+}
 
 const a = [
   // valid
