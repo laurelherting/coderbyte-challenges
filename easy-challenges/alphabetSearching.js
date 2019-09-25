@@ -6,7 +6,7 @@
 // solution:
 const assert = require("assert");
 
-const alphabetSearching = str => {
+function alphabetSearching(str) {
   const array = str.split("");
 
   for (let i = 97; i <= 122; i += 1) {
@@ -17,7 +17,7 @@ const alphabetSearching = str => {
 
   // console.log(array);
   return true;
-};
+}
 
 const a1 = "gbjkbvnienjnvaabc";
 const r1 = "true";
