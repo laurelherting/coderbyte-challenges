@@ -6,8 +6,7 @@
 // solution:
 const assert = require("assert");
 
-// steps explanation
-const Palindrome = str => {
+function Palindrome(str) {
   const init = str.split(" ").join("");
   const x = init.split("");
   const y = x.reverse();
@@ -18,7 +17,7 @@ const Palindrome = str => {
   }
 
   return false;
-};
+}
 
 const a1 = "A weight, suspended from pivot. It can swing freely.";
 const r1 = "false";
