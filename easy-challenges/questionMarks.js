@@ -7,7 +7,7 @@
 // solution:
 const assert = require("assert");
 
-const QuestionMarks = str => {
+function QuestionMarks(str) {
   let flag = false;
   for (let i = 0; i < str.length; i += 1) {
     for (let j = i + 1; j < str.length; j += 1) {
@@ -20,7 +20,7 @@ const QuestionMarks = str => {
     }
   }
   return flag;
-};
+}
 
 // console.log(QuestionMarks('acc?7??sss?3rr1??????5'));
 

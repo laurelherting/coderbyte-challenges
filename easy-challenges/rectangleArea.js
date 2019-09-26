@@ -5,7 +5,7 @@
 // solution:
 const assert = require("assert");
 
-const RectangleArea = strArr => {
+function RectangleArea(strArr) {
   const points = strArr.map(str => str.match(/\d+/g));
   const minX = points.map(point => point[0]).sort()[0];
   const minY = points.map(point => point[1]).sort()[0];
@@ -18,7 +18,7 @@ const RectangleArea = strArr => {
     .sort()
     .reverse()[0];
   return (maxX - minX) * (maxY - minY);
-};
+}
 
 const a1 = '"(1 1)","(1 3)","(3 1)","(3 3)"'; // input
 const r1 = "4"; // output
