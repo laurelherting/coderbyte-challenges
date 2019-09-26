@@ -5,7 +5,7 @@
 // solution:
 const assert = require("assert");
 
-const PalindromeSwapper = str => {
+function PalindromeSwapper(str) {
   const inputArray = str.split("");
   const strLen = inputArray.length;
   const palTester = arr => {
@@ -28,7 +28,7 @@ const PalindromeSwapper = str => {
     // console.log('PalindromeSwapper');
   }
   return -1;
-};
+}
 
 const in1 = "anna"; // input
 const expect1 = "anna"; // output
