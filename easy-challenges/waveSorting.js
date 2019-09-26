@@ -5,7 +5,7 @@
 // solution:
 const assert = require('assert');
 
-const WaveSorting = arr => {
+function WaveSorting(arr) {
   const count = {};
   for (let i = 0; i < arr.length; i += 1) {
     if (count[arr[i]] >= 1) {
@@ -15,18 +15,19 @@ const WaveSorting = arr => {
     }
     console.log('a');
 
-  let newArr = [];
+    let newArr = [];
     for (let a in count) {
       newArr.push(count[a]);
     }
+
     return Math.max(...newArr) > arr.length/2 ? false : true;
-};
+  }
 
-// console.log(WaveSorting([0, 4, 22, 4, 14, 4, 2])); // true
-// console.log(WaveSorting([0, 1, 2, 4, 1, 1, 1])); // false
+  // console.log(WaveSorting([0, 4, 22, 4, 14, 4, 2])); // true
+  // console.log(WaveSorting([0, 1, 2, 4, 1, 1, 1])); // false
 
-const a1 = '[0, 1, 2, 4, 1, 4]'; // input
-const r1 = 'true'; // output
+  const a1 = '[0, 1, 2, 4, 1, 4]'; // input
+  const r1 = 'true'; // output
 
-const t1 = WaveSorting(a1);
-assert.strictEqual(t1, r1);
+  const t1 = WaveSorting(a1);
+  assert.strictEqual(t1, r1);
