@@ -1,10 +1,12 @@
-const assert = require('assert');
-// take the array of numbers stored in arr and
-// return the string true if any combination of
-// numbers in the array can be added up to equal the
+// objective:
+// Take the array of numbers stored in arr and return the string true if
+// any combination of numbers in the array can be added up to equal the
 // largest number in the array, otherwise return the string false
 
-const ArrayAddition = (arr) => {
+// solution:
+const assert = require('assert');
+
+function ArrayAddition (arr) {
   const largest = [].slice.call(arr).sort((a, b) {
     return a - b;
   }).pop();
@@ -48,6 +50,7 @@ assert.strictEqual(t1, r1);
 const t2 = ArrayAddition([5, 6, 1, 2]);
 assert.strictEqual(t2, 14, 'Input [5,6,1,2] should yield Output 14');
 console.log(t1);
+
 // ex. if arr contains [4, 6, 23, 10, 1, 3], then output = true,
 // bc  4 + 6 + 10 + 3 = 23
 // The array will not be empty, will not contain all the same elements,
