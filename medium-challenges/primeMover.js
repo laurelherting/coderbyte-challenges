@@ -1,13 +1,19 @@
-// use prime sieve to generate a list of primes
-// up to the limit
-const assert = require('assert');
+// objective:
+// Use prime sieve to generate a list of primes up to the limit
 
-const PrimeMover = (num) => {
+// solution:
+const assert = require("assert");
+
+const PrimeMover = num => {
   // negative numbers cannot be primes
-  if (num < 1) { return 'invalid'; }
+  if (num < 1) {
+    return "invalid";
+  }
 
   // first prime number is 2, the only even prime
-  if (num === 1) { return 2; }
+  if (num === 1) {
+    return 2;
+  }
 
   // if greater than 2, start count at 1
   let count = 1;
@@ -23,8 +29,7 @@ const PrimeMover = (num) => {
         count += 1;
         n += 1;
         break;
-      } else
-      if (n % i === 0) {
+      } else if (n % i === 0) {
         n += 1;
         break;
       }
@@ -34,6 +39,6 @@ const PrimeMover = (num) => {
   return n - 1;
 };
 
-const a1 = '8'; // input
+const a1 = "8"; // input
 const t1 = PrimeMover(a1);
 assert(t1);
