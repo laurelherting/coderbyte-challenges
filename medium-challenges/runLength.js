@@ -1,8 +1,11 @@
-const assert = require('assert');
+// objective:
 
-const RunLength = (str) => {
+// solution:
+const assert = require("assert");
+
+function RunLength(str) {
   let count = 1;
-  let result = '';
+  let result = "";
 
   for (let i = 0; i < str.length; i += 1) {
     if (str[i] === str[i + 1]) {
@@ -13,9 +16,9 @@ const RunLength = (str) => {
     }
   }
   return result;
-};
+}
 
-const a1 = 'nnnnnviimmmm'; // input
-const r1 = '5n1v2i4m'; // output
+const a1 = "nnnnnviimmmm"; // input
+const r1 = "5n1v2i4m"; // output
 const t1 = RunLength(a1);
 assert(t1, r1);
