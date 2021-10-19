@@ -6,8 +6,11 @@ const assert = require("assert");
 
 function DashInsert(str) {
   const arr = str.split("");
+  // loop through to find odd numbers
   for (let i = 0; i < str.length - 1; i += 1) {
+    // check if current number is odd and the next number is also odd
     if (arr[i] % 2 !== 0 && arr[i + 1] % 2 !== 0) {
+      // if it is, then add dash between the two odd numbers
       arr[i] = `${arr[i]}-`;
     }
   }
