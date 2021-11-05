@@ -8,6 +8,7 @@
 const assert = require("assert");
 
 function LongestWord(sen) {
+  // remove all non-alphanumeric characters
   const arr = sen.match(/[a-z0-9]+/gi);
 
   const sorted = arr.sort((a, b) => b.length - a.length);
