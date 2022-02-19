@@ -1,7 +1,7 @@
 // objective:
 // Solve by creating a new array, then loop through one of the
 // arrays and add each element with the corresponding element
-// in the other array, then stor this sum in the new array.
+// in the other array, then store this sum in the new array.
 
 // solution:
 const assert = require("assert");
