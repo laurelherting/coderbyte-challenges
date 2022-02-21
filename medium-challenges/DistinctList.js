@@ -21,3 +21,6 @@ function DistinctList(arr) {
   }
   return duplicates;
 }
+
+// console.log(DistinctList(""));
+// "0"
