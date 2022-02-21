@@ -5,7 +5,7 @@
 function DashInsert(str) {
   var idk = 0;
   // loop through to find odd numbers
-  while (idx < str.length - 1) {
+  while (idk < str.length - 1) {
     // check if current number is odd and the next number is also odd
     if (Number(str[idk]) % 2 === 1 && Number(str[idk + 1]) % 2 === 1) {
       // if it is, then add dash between the two odd numbers
