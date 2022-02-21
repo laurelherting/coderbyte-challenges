@@ -3,10 +3,11 @@
 
 // solution:
 function DashInsert(str) {
-  var idk = 0;
+  let idk = 0;
   // loop through to find odd numbers
   while (idk < str.length - 1) {
     // check if current number is odd and the next number is also odd
+    // needs remainder operator - to return the remainder of a division operation
     if (Number(str[idk]) % 2 === 1 && Number(str[idk + 1]) % 2 === 1) {
       // if it is, then add dash between the two odd numbers
 
@@ -19,3 +20,5 @@ function DashInsert(str) {
 
   return str;
 }
+
+console.log(DashInsert("23522"));
