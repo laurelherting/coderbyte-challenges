@@ -7,7 +7,7 @@ function DashInsert(str) {
   // loop through to find odd numbers
   while (idk < str.length - 1) {
     // check if current number is odd and the next number is also odd
-    // needs remainder operator - to return the remainder of a division operation
+    // needs Modulus (remainder operator) - to return the remainder of a division operation
     if (Number(str[idk]) % 2 === 1 && Number(str[idk + 1]) % 2 === 1) {
       // if it is, then add dash between the two odd numbers
 
