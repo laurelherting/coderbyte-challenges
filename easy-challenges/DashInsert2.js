@@ -12,7 +12,7 @@ function DashInsert(str) {
       // if it is, then add dash between the two odd numbers
 
       str = str.slice(0, idk + 1) + "-" + str.slice(idk + 1);
-      idx = idk + 2;
+      idk = idk + 2;
     } else {
       idk++;
     }
