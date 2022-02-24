@@ -4,9 +4,13 @@ then your program should output 2 because there are two duplicates of one of the
 const assert = require("assert");
 
 function DistinctList(arr) {
+  // Declare and initialize an array
   var duplicates = 0;
+  // Duplicate elements can be found using two for loops
+  //  Outer loop will iterate through the array from 0 to length of the array
   for (var i = 0; i < arr.length; i++) {
     for (var j = 0; j < arr.length; j++) {
+      // If a match is found (duplicate element is found), then display element
       if (arr[i] === arr[j] && i !== j) {
         duplicates++;
         arr.splice(arr.indexOf(arr[i]), 1);
