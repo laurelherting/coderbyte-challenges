@@ -21,6 +21,7 @@ function DashInsert(str) {
 const in1 = "12345677"; // input
 const expect1 = "1234567-7"; // output
 const test1 = DashInsert(in1);
+console.log(test1);
 assert.strictEqual(test1, expect1, `should be ${expect1}`);
 
 const in2 = "8865321398"; // input
