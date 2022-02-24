@@ -18,8 +18,8 @@ function DashInsert(str) {
   return arr.join("");
 }
 
-const in1 = "1234567"; // input
-const expect1 = "1234567"; // output
+const in1 = "12345677"; // input
+const expect1 = "1234567-7"; // output
 const test1 = DashInsert(in1);
 assert.strictEqual(test1, expect1, `should be ${expect1}`);
 
