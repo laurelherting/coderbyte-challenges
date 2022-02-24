@@ -2,6 +2,8 @@
 // insert a dash between two CONSECUTIVE odd numbers
 
 // solution:
+const assert = require("assert");
+
 function DashInsert(str) {
   let idk = 0;
   // loop through to find odd numbers
@@ -21,4 +23,9 @@ function DashInsert(str) {
   return str;
 }
 
-console.log(DashInsert("23522"));
+const in1 = "12345677"; // input
+const expect1 = "1234567-7"; // output
+const test1 = DashInsert(in1);
+console.log(test1);
+assert.strictEqual(test1, expect1, `should be ${expect1}`);
+// console.log(DashInsert("23522"));
