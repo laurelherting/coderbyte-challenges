@@ -18,6 +18,7 @@ function ArithGeoII(arr) {
   return math;
 }
 
+// test
 const a1 = "5, 10, 15"; // input
 const r1 = "Arithmetic"; // output
 const t1 = ArithGeoII(a1);
